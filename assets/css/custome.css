@@ -1,0 +1,51 @@
+/* header */
+.header-v8{
+    padding:1rem 0;
+}
+.header-content-v8 .logo-v8{
+    margin-right: auto;
+}
+.header-content-v8 .logo-v8 img{
+        height: 3rem;
+    }
+.header-content-v8 nav ul li{
+    padding: 0 1.25rem;
+}
+.header-content-v8 nav ul li a{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+.header-content-v8 nav ul li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 1rem
+}
+.header-content-v8 nav ul li>ul li a{
+    font-size: 1rem;
+}
+.nav-toggle-btn{
+    margin-left: 5rem !important;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width:768px) {
+    html,body {
+        font-size: 12px; 
+    }
+}
+
+
+
+
+
+@media only screen and (max-width:1200px) {
+    html,body {
+        font-size: 14px; 
+    }
+}

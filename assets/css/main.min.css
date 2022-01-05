@@ -19343,7 +19343,7 @@ html {
 
 .lni {
     display: inline-block;
-    font: normal normal normal 1em/1 LineIcons;
+    font: normal normal normal 1em/1 LineIcons !important;
     speak: none;
     text-transform: none;
     -webkit-font-smoothing: antialiased;
@@ -28373,7 +28373,7 @@ body.dark-v .slide-container {
     display: none
 }
 
-.header-v8:before {
+/* .header-v8:before {
     content: "";
     position: absolute;
     top: 0;
@@ -28383,7 +28383,7 @@ body.dark-v .slide-container {
     background-image: url(../img/line.png);
     background-repeat: no-repeat;
     background-size: cover
-}
+} */
 
 .header-v8 .container {
     max-width: 1230px;
@@ -28417,7 +28417,7 @@ body.dark-v .slide-container {
     margin-top: 0
 }
 
-.header-content-v8 nav ul li:before {
+/* .header-content-v8 nav ul li:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -28427,7 +28427,7 @@ body.dark-v .slide-container {
     background-color: #ccc;
     transform: translateY(-50%);
     border-radius: 50%
-}
+} */
 
 .header-content-v8 nav ul li:first-child {
     padding-left: 0
