@@ -8,6 +8,7 @@
 	<meta name="author" content="shail">
 	<meta name="keywords" content="" />
 	<link rel="icon" href="assets/img/favicon.png">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/fonts/static/pretendard.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/custome.css">
@@ -161,6 +162,78 @@
 	</header><!--header end-->
 
 	<div class="wrapper">
+		<section class="main-banner">
+			<!-- Swiper -->
+			<div class="swiper">
+				<div class="append-buttons">
+					<a href="#" class="slide-1 append-button active" data-target="1">업계 1위 대박 매출</a>
+					<a href="#" class="slide-2 append-button" data-target="2">부담없는 자본금</a>
+					<a href="#" class="slide-3 append-button" data-target="3">전국 방방곡곡 매장</a>
+					<a href="#" class="slide-4 append-button" data-target="4">재방문율 높은 오프라인 회원</a>
+				</div>
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide">
+						<h2>부담없는 소자본 창업!<br>
+							트랜디한 상품군으로,<br>
+							반려동물용품 업계 매출
+							<span>1위</span>
+						</h2>
+						<h3>
+							직전 월 평균 매출<br>
+							<span><b>35,181,893</b>원</span>
+						</h3>
+					</div>
+					<div class="swiper-slide">
+						<h2>부담없는 소자본 창업!<br>
+							트랜디한 상품군으로,<br>
+							반려동물용품 업계 매출
+							<span>1위</span>
+						</h2>
+						<h3>
+							직전 월 평균 매출<br>
+							<span><b>35,181,893</b>원</span>
+						</h3>
+					</div>
+					<div class="swiper-slide">
+						<h2>부담없는 소자본 창업!<br>
+							트랜디한 상품군으로,<br>
+							반려동물용품 업계 매출
+							<span>1위</span>
+						</h2>
+						<h3>
+							직전 월 평균 매출<br>
+							<span><b>35,181,893</b>원</span>
+						</h3>
+					</div>
+					<div class="swiper-slide">
+						<h2>부담없는 소자본 창업!<br>
+							트랜디한 상품군으로,<br>
+							반려동물용품 업계 매출
+							<span>1위</span>
+						</h2>
+						<h3>
+							직전 월 평균 매출<br>
+							<span><b>35,181,893</b>원</span>
+						</h3>
+					</div>
+				</div>
+				<!-- Add Pagination -->
+				
+				<div class="swiper-pagination">
+					<div class="swiper-pagination-dot"></div>
+					<div class="swiper-pagination-autoplay">
+						<button type="button" class="swiper-autoplay-btn swiper-pause"><i class="fas fa-pause"></i></button>
+					</div>
+				</div>
+				<!-- Add Arrows -->
+				<div class="swiper-boutton-nav">
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+				
+			  </div>
+		</section>
 		<section class="banner-v8">
 			<div class="container">
 				<div class="banner-v8-content">
@@ -1098,6 +1171,51 @@
 <script src="assets/js/tweenMax.js"></script>
 <script src="assets/js/wow.min.js"></script>
 <script src="assets/js/scripts.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+	// let appendNumber = 600;
+    // let prependNumber = 1;
+    const swiper = new Swiper('.swiper', {
+		slidesPerView: "auto",
+        spaceBetween: 100,
+        centeredSlides: true,
+		loop: true,
+		autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination-dot',
+		  clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+	});
+	$(".append-button").on("click",function(e){
+		e.preventDefault();
+
+		$(".append-button").removeClass("active");
+		$(this).addClass("active");
+		let target = $(this).attr("data-target");
+		console.log(target-1);
+		swiper.slideToLoop((target-1), 400);
+	});
+	$(".swiper-autoplay-btn").on("click",function(e){
+		if($(this).hasClass("pause")){
+			swiper.autoplay.start();
+			$(this).html("<i class='fas fa-pause'></i>")
+		}else{
+			swiper.autoplay.stop();
+			$(this).html("<i class='fas fa-play'></i>")
+		}
+		$(this).toggleClass("pause");
+	});
+
+     
+</script>
+
 <script>
 	$(document).on("ready", function() {
         // init controller
