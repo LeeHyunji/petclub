@@ -9,6 +9,10 @@ strong{
     color: #f0885d;
     font-weight: 700;
 }
+b{
+    font-weight: 700;
+}
+
 
 
 /* header */
@@ -233,8 +237,6 @@ strong{
     background-repeat: no-repeat;
 }
 
-
-
 .card-feature{
     background-color: #fff;
     border-radius: 2rem;
@@ -268,11 +270,113 @@ strong{
 }
 
 
+
+/* main-store-swiper */
+.sec-main-store .sec-content{
+    position: relative;
+}
+.sec-main-store .sec-content .container-fluid{
+    width: 80%;
+}
+.sec-main-store .sec-content::before{
+    content:"";
+    position:absolute;
+    height: 1000px;
+    top:-5rem;
+    left:0;
+    width: 100%;
+    background-image: url(../image/receipt.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main-store-swiper{
+    margin-top: 500px;
+    padding-top: 5rem;
+}
+.main-store-swiper .swiper-slide{
+    border : solid 2px #f0885d;
+    border-radius : 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transform: scale(0.8);
+    text-align: center;
+    padding: 2rem 0 3rem 0;
+    background: #fff;
+    transition: transform 0.4s;
+}
+.main-store-swiper .swiper-horizontal>.swiper-pagination-progressbar, .main-store-swiper .swiper-pagination-progressbar.swiper-pagination-horizontal, .main-store-swiper .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .main-store-swiper .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{
+    max-width: 60%;
+    margin: 5rem auto 3rem auto;
+    height: 0.5rem;
+}
+.main-store-swiper .swiper-slide img{
+    height: 5rem;
+    width: auto;
+    margin-bottom: 1rem;
+}
+.main-store-swiper .swiper-slide h5{
+    color: #000;
+    font-size : 2rem;
+    font-weight: 400;
+    white-space: pre-line;
+}
+.main-store-swiper .swiper-slide h6{
+    margin: 3rem auto 1.5rem auto;;
+    background: #f0885d;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 250px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.main-store-swiper .swiper-slide p{
+    font-size: 1.5rem;
+    line-height: 1.36;
+}
+.main-store-swiper .swiper-slide p.store-price{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #000;
+}
+.main-store-swiper .swiper-slide.swiper-slide-active{
+    transform: scale(1);
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+    /* /* background: #f0885d; */
+    background: var(--swiper-pagination-color,#f0885d);
+
+}
+.sec-main-store .more-button{
+    text-align: center;
+}
+.sec-main-store .btn-store-more{
+    white-space: pre-line;
+    border : solid 2px #f0885d;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    line-height: 1.36;
+    color: #000;
+}
+.sec-main-store .btn-store-more:hover{
+    color: #fff;
+    background: #f0885d;
+}
+.sec-main-store .btn-store-more:hover strong{
+    color: #fff;
+    transition: all .4s ease-in-out;
+}
+
 @media only screen and (max-width:991px) {
     html,body {
         font-size: 12px; 
     }
     /* sec */
+    .sec-main{
+        padding: 3rem 0;
+    }
     .sec-main .sec-header h2{
         font-size: 1.5rem;
     }
@@ -349,7 +453,7 @@ strong{
     }
 
     /* main-banner swiper.js nav버튼 */
-    .main-banner .swiper-boutton-nav{
+    .main-banner .swiper-button-nav{
         display: none;
     }
 
@@ -387,6 +491,59 @@ strong{
         font-size: 0.9rem;
         white-space: normal;
     }
+
+    /* main-store-swiper */
+    .sec-main-store .sec-content::before{
+        height: 400px;
+        top: -3rem;
+        background-size: cover;
+    }
+    .sec-main-store .sec-content .container-fluid{
+        width: 100%;
+        padding: 0;
+    }
+    .main-store-swiper{
+        margin-top: 150px
+    }
+    .main-store-swiper .swiper-slide{
+        padding: 1rem 0 1.5rem 0;
+        transform : scale(1);
+    }
+    .main-store-swiper .swiper-horizontal>.swiper-pagination-progressbar, .main-store-swiper .swiper-pagination-progressbar.swiper-pagination-horizontal, .main-store-swiper .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .main-store-swiper .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{
+        margin : 2rem auto;
+        max-width: 80%;
+        height: 0.25rem;
+    }
+
+
+    .main-store-swiper .swiper-slide img{
+        height: 3rem;
+    }
+    .main-store-swiper .swiper-slide h5{
+        font-size: 1rem;
+    }
+    .main-store-swiper .swiper-slide h5 b{
+        font-size: 1.25rem;
+    }
+    .main-store-swiper .swiper-slide h6{
+        font-size: 1rem;
+        width: 80%;
+        border-radius: 2rem;
+        margin: 2rem auto 1rem auto;
+    }
+    .main-store-swiper .swiper-slide p{
+        font-size: 1rem;
+    }
+    .main-store-swiper .swiper-slide p.store-price{
+        font-size: 1.5rem;
+    }
+
+    .sec-main-store .btn-store-more{
+        font-size: 0.9rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+
 }
 
 
