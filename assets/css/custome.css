@@ -54,7 +54,7 @@ b{
     font-size : 2.5rem;
     font-weight: 400;
     text-align: center;
-    margin: 5rem 0;
+    margin: 5rem 0 2rem 0;
     white-space: pre-line;
 }
 .sec-main .sec-header h2 b{
@@ -209,6 +209,9 @@ b{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.sec-main-feature .sec-header h2{
+    margin-bottom: 5rem;
 }
 .sec-main.sec-main-feature .sec-header h2::before{
     content: "";
@@ -369,6 +372,92 @@ b{
     transition: all .4s ease-in-out;
 }
 
+
+
+
+/* sec-main-review  */
+.sec-main-review {
+    background : #efefef;
+}
+.sec-main-review .swiper-pagination{
+    margin-top: 2rem;
+ }
+ .sec-main-review .swiper-pagination-bullet{
+     background : #fff;
+ }
+.sec-main-review .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: #f0885d;
+}
+.card-review{
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.card-review .card-head{
+    background: #fff;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-review .card-head .card-head-title{
+    max-width: calc(100% - 7rem);
+}
+.card-review .card-head .store-name{
+    color: #000;
+}
+.card-review .card-head h5{
+    margin: 0.5rem 0 1rem 0;
+    color: #000;
+    font-weight: 700;
+    font-size: 2rem;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    overflow: hidden;
+}
+.card-review .card-head p{
+    font-size: 1.25rem;
+}
+.card-review .card-head-img{
+    background: #efefef;
+    width: 6rem;
+    height: 6rem;
+    flex: 0 0 6rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+.card-review .card-body{
+    background : #f0885d;
+    padding: 2rem;
+}
+.card-review .card-body h6{
+    color : #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.card-review .card-body p{
+    color : #fff;
+    font-size: 1.25rem;
+    line-height: 1.56;
+    word-break: keep-all;
+    white-space: pre-line;
+
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.card-review .card-body .more-button{
+    text-align: center;
+    margin-top: 2rem;
+}
+.card-review .card-body .btn-review-more{
+    color: #fff;
+    border-bottom: solid 1px #fff;
+    font-weight: 700;
+    padding-bottom: 0.25rem;
+}
 @media only screen and (max-width:991px) {
     html,body {
         font-size: 12px; 
@@ -379,6 +468,7 @@ b{
     }
     .sec-main .sec-header h2{
         font-size: 1.5rem;
+        margin : 3rem 0 1rem 0;
     }
     .sec-main .sec-header h2 b{
         font-size: 2.5rem;
@@ -461,9 +551,6 @@ b{
     .sec-main-feature{
         padding: 3rem 0;
     }
-    .sec-main .sec-header h2{
-        margin: 3rem 0;
-    }
     .sec-main.sec-main-feature .sec-header h2::before{
         height: 2.5rem;
     }
@@ -493,6 +580,9 @@ b{
     }
 
     /* main-store-swiper */
+    .sec-main-feature .sec-header h2{
+        margin-bottom: 3rem;
+    }
     .sec-main-store .sec-content::before{
         height: 400px;
         top: -3rem;
@@ -543,7 +633,37 @@ b{
         padding: 0.5rem 1.5rem;
     }
 
-
+    /* sec-main-review */
+    .sec-main-review .swiper .swiper-wrapper {
+        margin: 0px 1rem;
+    }
+    .sec-main-review .swiper-slide{
+        max-width: 85%;
+        border-radius: 10px;
+    }
+    .card-review .card-head .card-head-title {
+        max-width: calc(100% - 6rem);
+    }
+    .card-review .card-head h5{
+        font-size: 1.5rem;
+    }
+    .card-review .card-head p{
+        font-size: 1rem;
+    }
+    .card-review .card-head-img{
+        width: 5rem;
+        height: 5rem;
+        flex: 0 0 5rem;
+    }
+    .card-review .card-head,.card-review .card-body{
+        padding: 1.5rem;
+    }
+    .card-review .card-body h6{
+        font-size: 1.25rem;
+    }
+    .card-review .card-body p{
+        font-size: 1rem;
+    }
 }
 
 
