@@ -1,3 +1,11 @@
+* {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
 /* header */
 .header-v8{
     padding:1rem 0;
@@ -37,33 +45,8 @@
     width: 100%;
     height: 550px;
 }
-
-.main-banner .append-buttons{
-    height: 5rem;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem 0;
-}
-.main-banner .append-buttons a{
-    font-size: 1.25rem;
-    color: #999;
-    margin: 0.75rem 1rem; 
-
-    border-bottom: solid 1px #999; 
-    transition-duration: 0.2s;
-}
-.main-banner .append-buttons a.active{
-    color: #fff;
-    background-color: #f0885d;
-    border-radius: 2rem;
-    border:0;
-    padding: 0.75rem 2rem; 
-    margin:0 1rem;
-}
-
-.swiper .swiper-slide{
+/* main-banner slide */
+.main-banner .swiper .swiper-slide{
     max-width: 70% ;
     background-color: #fff;
     border-radius: 2rem;
@@ -74,7 +57,7 @@
     height: 500px;
     padding-top: 30%;
 }
-.swiper .swiper-slide h2{
+.main-banner .swiper .swiper-slide h2{
     position: absolute;
     top:5rem;
     left: 3rem;
@@ -84,7 +67,7 @@
     display: inline-block;
     font-weight: 400;
 }
-.swiper .swiper-slide h2 span{
+.main-banner .swiper .swiper-slide h2 span{
     position: absolute;
     right:- 6rem;
     margin-left: 1rem;
@@ -98,7 +81,7 @@
     line-height: 5rem;
     text-align: center;
 }
-.swiper .swiper-slide h3 {
+.main-banner .swiper .swiper-slide h3 {
     position:absolute;
     left: 3rem;
     bottom:3rem;
@@ -106,25 +89,29 @@
     font-weight: 400;
     color: #fff;
 }
-.swiper .swiper-slide h3 span{
+.main-banner .swiper .swiper-slide h3 span{
     font-size: 5rem;
 }
-.swiper .swiper-slide h3 b{
+.main-banner .swiper .swiper-slide h3 b{
     font-weight: 900;
 }
 
-
-
+/* main-banner swiper.js nav버튼 */
+.main-banner .main-banner .swiper-boutton-nav{ 
+    width: 70%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+}
 .main-banner .swiper-button-next, .main-banner .swiper-rtl .swiper-button-prev{
-    right: calc(10% + 25px);
-    transform: translateX(25%);
+    right: -60px;
 }
 .main-banner .swiper-button-prev, .main-banner  .swiper-rtl .swiper-button-next{
-    left: calc(10% + 25px);
-    transform: translateX(-25%);
-
+    left: -60px;
 }
 
+/* main-banner swiper.js pagination - bullets타입 */
 .swiper-pagination{
     position : unset;
     height: 5rem;
@@ -134,22 +121,13 @@
     margin: 1rem 0;
     font-size: 0.8rem;
 }
-.swiper-pagination .swiper-pagination-autoplay button{
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    background : transparent;
-    border: solid 2px #999;
-    margin-left: 1rem;
-    text-align: center;
-}
 .swiper-pagination .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination .swiper-pagination-custom, .swiper-pagination .swiper-pagination-fraction{
     width:auto;
     line-height: 1;
 }
 .swiper-pagination-bullet{
-    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,0.9rem));
-    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,0.9rem));
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,0.8rem));
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,0.8rem));
     background : rgba(0,0,0,0.2);
     opacity: 1;
 }
@@ -157,10 +135,115 @@
     border: solid 2px #f0885d;
     background : rgba(0,0,0,0.2);
 }
+/* main-banner swiper.js pagination - custom타입 */
+.main-banner .append-buttons{
+    height: 5rem;
+    display : flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin : 1rem auto;
+    width: 100%;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.main-banner .append-buttons span{
+    display: inline-block;
+    width:auto;
+    height: auto;
+    font-size: 1.25rem;
+    color: #999;
+    margin: 0.75rem 1rem !important; 
+    background: transparent;
+    border-radius: 0;
+    border-bottom: solid 1px #999; 
+    transition-duration: 0.2s;
+}
+.main-banner .append-buttons span.swiper-pagination-bullet-active{
+    color: #fff;
+    background-color: #f0885d;
+    border-radius: 2rem;
+    border:0;
+    padding: 0.75rem 2rem; 
+    margin:0 1rem;
+}
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:991px) {
     html,body {
         font-size: 12px; 
+    }
+
+    /* index.html 메인화면*/
+    /* main-banner : 메인배너 */
+    .main-banner:before{
+        display: none;
+    }
+    /* main-banner slide */
+    .main-banner .swiper .swiper-wrapper{
+        margin: 0px 1rem;
+    }
+    .main-banner .swiper .swiper-slide {
+        max-width: 85%;
+        background-color: #fff;
+        border-radius: 10px;
+        background-image: url(../image/main_slide_01.jpg);
+        background-position: 60%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+        padding-top: 30%;
+    }
+    .main-banner .swiper .swiper-slide h2{
+        top:5rem;
+        left: 1rem;
+        font-size: 1.25rem;
+        color: #fff;
+        line-height: 1.56;
+        display: inline-block;
+        font-weight: 400;
+    }
+    .main-banner .swiper .swiper-slide h2 span{
+        left: 0;
+        right: auto;
+        margin-left: 0rem;
+        bottom: -5.5rem;
+        font-size: 2rem;
+    }
+    .main-banner .swiper .swiper-slide h3 {
+        position:absolute;
+        left: 1rem;
+        bottom:3rem;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+    .main-banner .swiper .swiper-slide h3 span{
+        font-size: 3rem;
+    }
+
+    /* main-banner swiper.js pagination - bullets타입 */
+    .swiper-pagination{
+        margin :0;
+        height: 3rem;
+    }
+    /* main-banner swiper.js pagination - custom타입 */
+    .main-banner .append-buttons{
+        justify-content: flex-start;
+        padding : 0 0.5rem;
+        height: 3.75rem;
+        margin : 0 0 0.5rem 0;
+    }
+    .main-banner .append-buttons span{
+        font-size: 0.9rem;
+        margin: 0.5rem !important;
+    }
+    .main-banner .append-buttons span.swiper-pagination-bullet-active{
+        padding: 0.5rem 1.25rem;
+        margin: 0.5rem;
+    }
+
+    /* main-banner swiper.js nav버튼 */
+    .main-banner .swiper-boutton-nav{
+        display: none;
     }
 }
 
@@ -172,4 +255,5 @@
     html,body {
         font-size: 14px; 
     }
+    
 }
