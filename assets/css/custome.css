@@ -566,6 +566,60 @@ footer .bottom-bar .info-content p{
 
 
 
+/* ************************************************************* */
+/* about.html 브랜드소개                                            */
+/* ************************************************************* */
+/* 2. sec-about-mission: 대표 인사말 */
+.sec-about-mission .mission-sec .vlm-text{
+    padding-left:0;
+    padding-right: 5rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+.sec-about-mission .mission-sec .vlm-text>h2{
+    font-size: 3rem;
+}
+.sec-about-mission p.header-sub{
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #ff4800
+}
+.sec-about-mission .mission-sec .vlm-text>div{
+    margin:3rem 0;
+}
+.sec-about-mission .mission-sec .vlm-text>div h3{
+    color: #020202;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.sec-about-mission .mission-sec .vlm-text p{
+    font-size : 1rem;
+    line-height: 1.56;
+}
+.sec-about-mission .mission-sec .crlce-misz{
+    width: 100%;
+}
+.sec-about-mission.misson-section-v8 .mission-sec .crlce-misz .crlce-list li.v1 .crlce-info>i{
+    font-size : 7rem !important;
+    color: #fff;
+}
+.sec-about-mission.misson-section-v8 .mission-sec .crlce-misz .crlce-list li.v2 .crlce-info>i{
+    font-size : 5rem !important;
+    color: #fff;
+}
+.sec-about-mission.misson-section-v8 .mission-sec .crlce-misz .crlce-list li.v3 .crlce-info>i{
+    font-size : 3rem !important;
+    color: #fff;
+}
+.sec-about-mission.misson-section-v8 .mission-sec .crlce-misz .crlce-list li .crlce-info>h3{
+    color: #fff;
+    font-size: 2rem;
+    padding:0;
+}
+
+
+
+
 
 
 
@@ -893,6 +947,34 @@ footer .bottom-bar .info-content p{
 
     }
     
+
+
+
+    /* ************************************************************* */
+    /* about.html 브랜드소개                                            */
+    /* ************************************************************* */
+    /* 2. sec-about-mission: 대표 인사말 */
+    .sec-about-mission .mission-sec .vlm-text{
+        padding-right: 0;
+        margin-top: 2rem;
+    }
+    .sec-about-mission .mission-sec .vlm-text>h2{
+        font-size: 2.5rem;
+    }
+    .sec-about-mission p.header-sub{
+        font-size: 1.25rem;
+    }
+    .sec-about-mission .mission-sec .vlm-text>div{
+        margin:2rem 0;
+    }
+    .sec-about-mission .mission-sec .vlm-text>div h3{
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    .sec-about-mission .mission-sec .crlce-misz{
+        display: none;
+    }
+
 
 }
 
