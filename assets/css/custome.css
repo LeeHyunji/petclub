@@ -94,6 +94,9 @@ footer .bottom-bar .info-content p{
 
 
 /* 공용 */
+.container-fluid{
+    width: 80%;
+}
 /* sec  */
 .sec-main {
     padding: 5rem 0;
@@ -617,8 +620,29 @@ footer .bottom-bar .info-content p{
     padding:0;
 }
 
-
-
+/* 3. sec-about-count: 숫자 카운트 */
+.sec-about-count{
+    padding: 5rem 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 5rem 0;
+}
+.sec-about-count .counter-sec-v6{
+    margin-top:0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+.sec-about-count  .counter-sec-v6 li .counter-cont{
+    flex-direction: column;
+    justify-content: center;
+}
+.sec-about-count .counter-sec-v6 li .counter-cont h3{
+    color: #020202;
+    font-size: 2rem;
+}
+.sec-about-count .counter-sec-v6 li .counter-cont h2{
+    font-size: 5rem;
+}
 
 
 
@@ -685,6 +709,9 @@ footer .bottom-bar .info-content p{
     }
 
     /* 공용 */
+    .container-fluid{
+        width: 100%;
+    }
     .sec-main{
         padding: 3rem 0;
     }
@@ -975,10 +1002,54 @@ footer .bottom-bar .info-content p{
         display: none;
     }
 
+    /* 3. sec-about-count : 숫자 카운트 */
+    .sec-about-count{
+        padding: 3rem 0;
+        margin: 3rem 0;
+    }
+    .sec-about-count.grow-business-v8 .counter-sec-v6 li{
+        width: 33.3333%;
+        max-width: 33.3333%;
+        -ms-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+        margin-bottom: 1rem;
+    }
+    .sec-about-count .counter-sec-v6 li .counter-cont h3{
+        color: #020202;
+        font-size: 1.5rem;
+    }
+    .sec-about-count .counter-sec-v6 li .counter-cont h2{
+        font-size: 4rem;
+    }
 
 }
 
 
+/* mobile 화면 */
+@media only screen and (max-width:764px) {
+    /* ************************************************************* */
+    /* about.html 브랜드소개                                            */
+    /* ************************************************************* */
+
+    /* 3. sec-about-count : 숫자 카운트 */
+    .sec-about-count{
+        padding: 3rem 0 0 0;
+    }
+    .sec-about-count.grow-business-v8 .counter-sec-v6 li{
+        width: 100%;
+        max-width: 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        margin-bottom: 1rem;
+    }
+    .sec-about-count .counter-sec-v6 li .counter-cont h3{
+        color: #020202;
+        font-size: 1.5rem;
+    }
+    .sec-about-count .counter-sec-v6 li .counter-cont h2{
+        font-size: 4rem;
+    }
+}
 
 
 

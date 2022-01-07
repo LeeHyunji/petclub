@@ -10,10 +10,10 @@ function startCounter() {
         jQuery('.count').each(function () {
             var $this = jQuery(this);
             jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
-                duration: 2000,
+                duration: 5000,
                 easing: 'swing',
                 step: function () {
-                    $this.text(Math.ceil(this.Counter));
+                    $this.text(Math.ceil(this.Counter).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","));
                 }
             });
         });
