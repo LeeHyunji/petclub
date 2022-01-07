@@ -572,25 +572,67 @@ footer .bottom-bar .info-content p{
 /* ************************************************************* */
 /* about.html 브랜드소개                                            */
 /* ************************************************************* */
+/* 1. about-banner : about.html 배너 */
+.about-banner .featured-post-sec .featured-post{
+    background-color: #fde1a4;
+    margin-bottom: 0;
+}
+.about-banner .featured-post-sec .featured-post .vector-img{
+    height: 350px;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.about-banner .featured-post-sec .featured-post .vector-img img{
+    height: 100%;
+    object-fit: cover;
+}
 /* 2. sec-about-mission: 대표 인사말 */
+.sec-about-mission.misson-section-v8 .mission-sec{
+    margin-top: 150px;
+}
 .sec-about-mission .mission-sec .vlm-text{
     padding-left:0;
     padding-right: 5rem;
     margin-top: 2rem;
     text-align: left;
 }
-.sec-about-mission .mission-sec .vlm-text>h2{
+.sec-about-mission .mission-sec .vlm-text>h2 , .about-banner .featured-post-sec .featured-post .featured-post-text>h2{
     font-size: 3rem;
 }
-.sec-about-mission p.header-sub{
+.sec-about-mission span.header-sub, .about-banner .featured-post-sec .featured-post .featured-post-text>span.header-sub{
     font-size: 1.25rem;
+    font-style: normal;
     font-weight: 400;
-    color: #ff4800
 }
-.sec-about-mission .mission-sec .vlm-text>div{
+.about-banner .featured-post-sec .featured-post .vector-img img{
+    height: 100%;
+    object-fit: cover;
+}
+/* 2. sec-about-mission: 대표 인사말 */
+.sec-about-mission.misson-section-v8 .mission-sec{
+    margin-top: 150px;
+}
+.sec-about-mission .mission-sec .vlm-text{
+    padding-left:0;
+    padding-right: 5rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+.sec-about-mission .mission-sec .vlm-text>h2 , .about-banner .featured-post-sec .featured-post .featured-post-text>h2{
+    font-size: 3rem;
+}
+.sec-about-mission span.header-sub, .about-banner .featured-post-sec .featured-post .featured-post-text>span.header-sub{
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.56;
+    color: #ff4800;
+    margin-bottom: 0;
+}
+.sec-about-mission .mission-sec .vlm-text>div, .about-banner .featured-post-sec .featured-post .featured-post-text>div{
     margin:3rem 0;
 }
-.sec-about-mission .mission-sec .vlm-text>div h3{
+.sec-about-mission .mission-sec .vlm-text>div h3,.about-banner .featured-post-sec .featured-post .featured-post-text p{
     color: #020202;
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -602,9 +644,17 @@ footer .bottom-bar .info-content p{
 .sec-about-mission .mission-sec .crlce-misz{
     width: 100%;
 }
+.mission-sec .crlce-misz .crlce-list li.v1{
+    width: 300px;
+    height: 300px;
+}
 .sec-about-mission.misson-section-v8 .mission-sec .crlce-misz .crlce-list li.v1 .crlce-info>i{
     font-size : 7rem !important;
     color: #fff;
+}
+.mission-sec .crlce-misz .crlce-list li.v2{
+    width: 250px;
+    height: 250px;
 }
 .sec-about-mission.misson-section-v8 .mission-sec .crlce-misz .crlce-list li.v2 .crlce-info>i{
     font-size : 5rem !important;
@@ -980,26 +1030,58 @@ footer .bottom-bar .info-content p{
     /* ************************************************************* */
     /* about.html 브랜드소개                                            */
     /* ************************************************************* */
+    /* 1. about-banner : about.html 배너 */
     /* 2. sec-about-mission: 대표 인사말 */
+    .sec-about-mission.misson-section-v8 .mission-sec{
+        margin-top : 2rem;
+    }
     .sec-about-mission .mission-sec .vlm-text{
         padding-right: 0;
         margin-top: 2rem;
     }
-    .sec-about-mission .mission-sec .vlm-text>h2{
+    .sec-about-mission .mission-sec .vlm-text>h2 , .about-banner .featured-post-sec .featured-post .featured-post-text>h2{
         font-size: 2.5rem;
     }
-    .sec-about-mission p.header-sub{
+    .sec-about-mission span.header-sub, .about-banner .featured-post-sec .featured-post .featured-post-text>span.header-sub{
         font-size: 1.25rem;
     }
-    .sec-about-mission .mission-sec .vlm-text>div{
+    .sec-about-mission .mission-sec .vlm-text>div, .about-banner .featured-post-sec .featured-post .featured-post-text>div{
         margin:2rem 0;
     }
-    .sec-about-mission .mission-sec .vlm-text>div h3{
+    .sec-about-mission .mission-sec .vlm-text>div h3,.about-banner .featured-post-sec .featured-post .featured-post-text p{
         font-size: 1.25rem;
         margin-bottom: 1rem;
     }
     .sec-about-mission .mission-sec .crlce-misz{
+        height: auto;
+    }
+    .misson-section-v8 .mission-sec .crlce-misz:after{
         display: none;
+    }
+    .mission-sec .crlce-misz .crlce-list{
+        display: flex;
+        justify-content: space-between;
+        max-width: 500px;
+        margin: auto;
+    }
+    .sec-about-mission .mission-sec .crlce-misz .crlce-list li.v1,.sec-about-mission .mission-sec .crlce-misz .crlce-list li.v2,.sec-about-mission .mission-sec .crlce-misz .crlce-list li.v3{
+        width: 30%;
+        height: auto;
+        padding-top: 30%;
+        margin-top: 0;
+
+        position: relative;
+        top: 0;
+        left: 0;
+        right: auto;
+        bottom: auto;
+    }
+    .sec-about-mission.misson-section-v8 .mission-sec .crlce-misz .crlce-list li.v1 .crlce-info>i,.sec-about-mission.misson-section-v8 .mission-sec .crlce-misz .crlce-list li.v2 .crlce-info>i,.sec-about-mission.misson-section-v8 .mission-sec .crlce-misz .crlce-list li.v3 .crlce-info>i{
+        font-size: 2.5rem !important;
+        margin-bottom:0;
+    }
+    .sec-about-mission.misson-section-v8 .mission-sec .crlce-misz .crlce-list li .crlce-info>h3{
+        font-size: 1rem !important;
     }
 
     /* 3. sec-about-count : 숫자 카운트 */
@@ -1020,6 +1102,8 @@ footer .bottom-bar .info-content p{
     }
     .sec-about-count .counter-sec-v6 li .counter-cont h2{
         font-size: 4rem;
+        width: 100%;
+        text-align: center;
     }
 
 }
