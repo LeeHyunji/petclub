@@ -44,6 +44,55 @@ b{
     margin-left: 5rem !important;
 }
 
+/* footer : bottom-bar */
+footer .bottom-bar{
+    position: fixed;
+    z-index: 1000;
+    bottom:0;
+    width:100%;
+    background: #4c3634;
+}
+footer .bottom-bar a{
+    display: block;
+    border-left: solid 2px rgba(255,255,255,.2);
+}
+footer .bottom-bar .row > .col:first{
+    border:0;
+}
+footer .bottom-bar .info-item{
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin:auto;
+    padding: 0.5rem 1rem;
+}
+footer .info-item .info-icon{
+    background: transparent;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+footer .info-item .info-icon img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 70%;
+    height: auto;
+    transform: translate(-50%,-50%);
+}
+footer .bottom-bar .info-content p{
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+
+
+
+
 /* 공용 */
 /* sec  */
 .sec-main {
@@ -526,6 +575,61 @@ b{
     html,body {
         font-size: 12px; 
     }
+
+    /* footer */
+    footer .bottom-bar{
+     border-radius: 5rem;
+     width: calc(100% - 1rem);
+     margin : 1rem 0.5rem;
+     box-shadow: 0px 3px 5px rgba(0,0,0 ,.2);
+     padding: 0.75rem 1.5rem;
+    }
+    footer .bottom-bar a{
+        border:0;
+        padding: 0;
+        position: relative;
+    }
+    footer .bottom-bar a::before{
+        content:"";
+        width: 1px;
+        height: 1rem;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left:-0.5rem;
+        transform: translateY(-50%);
+        /* left: -0.75rem */
+    }
+    footer .bottom-bar a.first::before{
+        height:0;
+    }
+    footer .bottom-bar .info-item{
+        justify-content: center;
+        padding: 0;
+    }
+    footer .bottom-bar .info-icon{
+        background: #fff;
+        width: 2rem;
+        height: 2rem;
+        margin:0 !important;
+    }
+    footer .bottom-bar .info-icon img{
+        width: 100%;
+        height: auto;
+    }
+    footer .bottom-bar .info-content{
+        min-width: 72px;
+        margin-left: 0.5rem;
+    }
+    footer .bottom-bar .info-content p{
+        color: #fff;
+        font-size: 0.8rem;
+        line-height: 1.36;
+    }
+    footer .bottom-bar .info-content p b{
+        font-weight: 400;
+    }
+
     /* 공용 */
     .sec-main{
         padding: 3rem 0;
@@ -605,7 +709,7 @@ b{
     .main-banner .swiper-button-nav{
         display: none;
     }
-    
+
     /* 1-1. sec-main-info : 메인배너 하단 정보  */
     .sec-main-info{
         padding: 1rem 0 2rem 0!important;
@@ -619,18 +723,19 @@ b{
     .sec-main-info .info-item .info-icon{
         background: #ececec;
         border-radius: 50%;
-        width: 90%;
-        padding-top: 90%;
+        width: 4rem;
+        height: 4rem;
         margin: auto;
         position: relative;
         margin-bottom: 0.5rem;
     }
     .sec-main-info .info-item .info-icon img{
         position: absolute;
-        top:0;
-        left:0;
-        width: 100%;
-        height: 100%;
+        top:50%;
+        left:50%;
+        width: 70%;
+        height: auto;
+        transform: translate(-50%,-50%);
     }
     .sec-main-info .info-item p{
         word-break: keep-all;
@@ -760,7 +865,7 @@ b{
 
     /* 4. sec-main-hotkeyword: 예비 점주가 궁금한 핫 키워드 바로가기   */
     .sec-main-hotkeywords{
-        height: 600px;
+        height: 500px;
         background-size: cover;
         background-position: left;
     }
