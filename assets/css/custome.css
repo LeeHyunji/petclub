@@ -30,7 +30,7 @@ b{
 }
 .header-content-v8 nav ul li a{
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 600;
 }
 .header-content-v8 nav ul li:hover>ul {
     opacity: 1;
@@ -44,8 +44,8 @@ b{
     margin-left: 5rem !important;
 }
 
-
-/* sec */
+/* 공용 */
+/* sec  */
 .sec-main {
     padding: 5rem 0;
 }
@@ -56,7 +56,7 @@ b{
     text-align: center;
     margin: 5rem 0 2rem 0;
     white-space: pre-line;
-    color: #000;
+    color: #020202;
 }
 .sec-main .sec-header h2 b{
     font-size : 5rem;
@@ -65,12 +65,15 @@ b{
     font-weight: 700;
 }
 .sec-main .sec-content{
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 
-/* index.html 메인화면*/
-/* main-banner : 메인배너 */
+
+/* ************************************************************* */
+/* index.html 메인화면                                             */
+/* ************************************************************* */
+/* 1. main-banner : 메인배너 */
 .main-banner:before{
     position:absolute;
     content:"";
@@ -78,7 +81,7 @@ b{
     width: 100%;
     height: 550px;
 }
-/* main-banner slide */
+    /* main-banner slide */
 .main-banner .swiper .swiper-slide{
     max-width: 70% ;
     background-color: #fff;
@@ -119,7 +122,7 @@ b{
     left: 3rem;
     bottom:3rem;
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: 00;
     color: #fff;
 }
 .main-banner .swiper .swiper-slide h3 span{
@@ -128,8 +131,7 @@ b{
 .main-banner .swiper .swiper-slide h3 b{
     font-weight: 900;
 }
-
-/* main-banner swiper.js nav버튼 */
+    /* main-banner swiper.js nav버튼 */
 .main-banner .swiper-button-nav{ 
     width: 70%;
     margin: auto;
@@ -139,12 +141,13 @@ b{
 }
 .main-banner .swiper-button-next, .main-banner .swiper-rtl .swiper-button-prev{
     right: -60px;
+    color: #b7b6b4;
 }
 .main-banner .swiper-button-prev, .main-banner  .swiper-rtl .swiper-button-next{
     left: -60px;
+    color: #b7b6b4;
 }
-
-/* main-banner swiper.js pagination - bullets타입 */
+    /* main-banner swiper.js pagination - bullets타입 */
 .swiper-pagination{
     position : unset;
     height: 5rem;
@@ -161,14 +164,14 @@ b{
 .swiper-pagination-bullet{
     width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,0.8rem));
     height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,0.8rem));
-    background : rgba(0,0,0,0.2);
+    background : #ececec;;
     opacity: 1;
 }
 .swiper-pagination-bullet-active{
     border: solid 2px #f0885d;
-    background : rgba(0,0,0,0.2);
+    background : #ececec;
 }
-/* main-banner swiper.js pagination - custom타입 */
+    /* main-banner swiper.js pagination - custom타입 */
 .main-banner .append-buttons{
     height: 5rem;
     display : flex;
@@ -185,11 +188,12 @@ b{
     width:auto;
     height: auto;
     font-size: 1.25rem;
-    color: #999;
+    font-weight: 600;
+    color: #696b6f;
     margin: 0.75rem 1rem !important; 
     background: transparent;
     border-radius: 0;
-    border-bottom: solid 1px #999; 
+    border-bottom: solid 1px #696b6f; 
     transition-duration: 0.2s;
 }
 .main-banner .append-buttons span.swiper-pagination-bullet-active{
@@ -201,10 +205,7 @@ b{
     margin:0 1rem;
 }
 
-
-
-
-/* sec-main-feature */
+/* 2. sec-main-feature: 펫클럽을 선택하면 성공하는 이유  */
 .sec-main-feature{
     background: url("../image/metal_navy_bg.jpg");
     background-position: center;
@@ -212,7 +213,8 @@ b{
     background-repeat: no-repeat;
 }
 .sec-main-feature .sec-header h2{
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
+    color: #dddddd;
 }
 .sec-main.sec-main-feature .sec-header h2::before{
     content: "";
@@ -240,7 +242,7 @@ b{
     background-position: center;
     background-repeat: no-repeat;
 }
-
+    /* card  */
 .card-feature{
     background-color: #fff;
     border-radius: 2rem;
@@ -262,7 +264,7 @@ b{
     padding-left: 0;
 }
 .card-feature h5{
-    color: #000;
+    color: #020202;
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -273,9 +275,7 @@ b{
     font-size: 1.25rem;
 }
 
-
-
-/* main-store-swiper */
+/* 3. sec-main-store: 펫클럽 가맹점 월매출 확인  */
 .sec-main-store .sec-content{
     position: relative;
 }
@@ -294,9 +294,10 @@ b{
     background-position: center;
     background-repeat: no-repeat;
 }
+    /* .main-store-swiper  */
 .main-store-swiper{
     margin-top: 500px;
-    padding-top: 5rem;
+    padding: 3rem 0;
 }
 .main-store-swiper .swiper-slide{
     border : solid 2px #f0885d;
@@ -310,7 +311,7 @@ b{
 }
 .main-store-swiper .swiper-horizontal>.swiper-pagination-progressbar, .main-store-swiper .swiper-pagination-progressbar.swiper-pagination-horizontal, .main-store-swiper .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .main-store-swiper .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{
     max-width: 60%;
-    margin: 5rem auto 3rem auto;
+    margin: 5rem auto 1rem auto;
     height: 0.5rem;
 }
 .main-store-swiper .swiper-slide img{
@@ -319,7 +320,7 @@ b{
     margin-bottom: 1rem;
 }
 .main-store-swiper .swiper-slide h5{
-    color: #000;
+    color: #020202;
     font-size : 2rem;
     font-weight: 400;
     white-space: pre-line;
@@ -341,16 +342,15 @@ b{
 .main-store-swiper .swiper-slide p.store-price{
     font-size: 3rem;
     font-weight: 900;
-    color: #000;
+    color: #020202;
 }
 .main-store-swiper .swiper-slide.swiper-slide-active{
     transform: scale(1);
 }
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
-    /* /* background: #f0885d; */
     background: var(--swiper-pagination-color,#f0885d);
-
 }
+    /* store more-button */
 .sec-main-store .more-button{
     text-align: center;
 }
@@ -362,7 +362,7 @@ b{
     display: inline-block;
     padding: 1rem 2rem;
     line-height: 1.36;
-    color: #000;
+    color: #020202;
 }
 .sec-main-store .btn-store-more:hover{
     color: #fff;
@@ -373,22 +373,21 @@ b{
     transition: all .4s ease-in-out;
 }
 
-
-
-
-/* sec-main-review  */
+ /* 4. sec-main-review: 펫클럽 실제점주 성공 창업 후기  */
 .sec-main-review {
-    background : #efefef;
+    background : #ececec;
 }
+    /* .main-store-review  */
 .sec-main-review .swiper-pagination{
     margin-top: 2rem;
- }
- .sec-main-review .swiper-pagination-bullet{
+}
+.sec-main-review .swiper-pagination-bullet{
      background : #fff;
- }
+}
 .sec-main-review .swiper-pagination-bullet.swiper-pagination-bullet-active{
     background: #f0885d;
 }
+    /* review card */
 .card-review{
     border-radius: 2rem;
     overflow: hidden;
@@ -404,19 +403,33 @@ b{
     max-width: calc(100% - 7rem);
 }
 .card-review .card-head .store-name{
-    color: #000;
+    color: #020202;
 }
 .card-review .card-head h5{
-    margin: 0.5rem 0 1rem 0;
-    color: #000;
+    margin: 0.5rem 0;
+    color: #020202;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-overflow: ellipsis; 
     white-space: nowrap; 
     overflow: hidden;
 }
-.card-review .card-head p{
+.card-review .card-head .review-star{
     font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+.card-review .card-head .review-star p{
+    margin-right: 0.5rem;
+}
+.star{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    background-image: url("../image/review_star.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .card-review .card-head-img{
     background: #efefef;
@@ -425,6 +438,10 @@ b{
     flex: 0 0 6rem;
     border-radius: 50%;
     margin-left: 1rem;
+}
+.card-review .card-head-img img{
+    width: 100%;
+    height: 100%;
 }
 .card-review .card-body{
     background : #f0885d;
@@ -449,19 +466,19 @@ b{
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+     /* review-card more-button */
 .card-review .card-body .more-button{
     text-align: center;
     margin-top: 2rem;
 }
 .card-review .card-body .btn-review-more{
-    color: #fff;
-    border-bottom: solid 1px #fff;
-    font-weight: 700;
+    color: #fef2d9;
+    border-bottom: solid 1px #fef2d9;
+    font-weight: 600;
     padding-bottom: 0.25rem;
 }
 
-
-/* sec-main-hotkeyword */
+/* 4. sec-main-hotkeyword: 예비 점주가 궁금한 핫 키워드 바로가기   */
 .sec-main-hotkeywords{
     height: 100vh;
     background-image: url(../image/bottom_bg.jpeg);
@@ -488,7 +505,7 @@ b{
     border : solid 4px #f0885d;
     border-radius: 5rem;
     padding: 1rem 2rem;
-    color: #000;
+    color: #020202;
     width: 100%;
     background: #fff;
     font-size: 2rem;
@@ -499,12 +516,17 @@ b{
 
 
 
+
+
+
+
+
 /* mobile 화면 */
 @media only screen and (max-width:991px) {
     html,body {
         font-size: 12px; 
     }
-    /* sec */
+    /* 공용 */
     .sec-main{
         padding: 3rem 0;
     }
@@ -515,13 +537,18 @@ b{
     .sec-main .sec-header h2 b{
         font-size: 2.5rem;
     }
+    .sec-main .sec-content{
+        padding: 1rem 0;
+    }
 
-    /* index.html 메인화면*/
-    /* main-banner : 메인배너 */
+    /* ************************************************************* */
+    /* index.html 메인화면                                             */
+    /* ************************************************************* */
+    /* 1. main-banner : 메인배너 */
     .main-banner:before{
         display: none;
     }
-    /* main-banner slide */
+        /* main-banner slide */
     .main-banner .swiper .swiper-wrapper{
         margin: 0px 1rem;
     }
@@ -529,21 +556,13 @@ b{
         max-width: 85%;
         background-color: #fff;
         border-radius: 10px;
-        background-image: url(../image/main_slide_01.jpg);
         background-position: 60%;
-        background-size: cover;
-        background-repeat: no-repeat;
         height: 500px;
         padding-top: 30%;
     }
     .main-banner .swiper .swiper-slide h2{
-        top:5rem;
         left: 1rem;
         font-size: 1.25rem;
-        color: #fff;
-        line-height: 1.56;
-        display: inline-block;
-        font-weight: 400;
     }
     .main-banner .swiper .swiper-slide h2 span{
         left: 0;
@@ -562,13 +581,12 @@ b{
     .main-banner .swiper .swiper-slide h3 span{
         font-size: 3rem;
     }
-
-    /* main-banner swiper.js pagination - bullets타입 */
+        /* main-banner swiper.js pagination - bullets타입 */
     .swiper-pagination{
         margin :0;
         height: 3rem;
     }
-    /* main-banner swiper.js pagination - custom타입 */
+        /* main-banner swiper.js pagination - custom타입 */
     .main-banner .append-buttons{
         justify-content: flex-start;
         padding : 0 0.5rem;
@@ -583,13 +601,12 @@ b{
         padding: 0.5rem 1.25rem;
         margin: 0.5rem;
     }
-
-    /* main-banner swiper.js nav버튼 */
+        /* main-banner swiper.js nav버튼 */
     .main-banner .swiper-button-nav{
         display: none;
     }
 
-    /* sec-main-feature */
+    /* 2. sec-main-feature: 펫클럽을 선택하면 성공하는 이유  */
     .sec-main-feature{
         padding: 3rem 0;
     }
@@ -603,9 +620,7 @@ b{
     .sec-main.sec-main-feature .sec-header h2::after{
         height: 3rem;
     }
-    .sec-main .sec-content{
-        padding: 3rem 0;
-    }
+        /* card  */
     .card-feature{
         margin-bottom: 1rem;
         border-radius: 1rem;
@@ -617,26 +632,27 @@ b{
         margin: 2rem;
     }
     .card-feature h5{
-        font-size: 1.5rem;
-        margin-bottom: 0.75rem;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
     }
     .card-feature p{
         font-size: 0.9rem;
         white-space: normal;
     }
 
-    /* main-store-swiper */
+    /* 3. sec-main-store: 펫클럽 가맹점 월매출 확인  */
     .sec-main-store .sec-content::before{
         height: 400px;
-        top: -3rem;
+        top: -2rem;
         background-size: cover;
     }
     .sec-main-store .sec-content .container-fluid{
         width: 100%;
         padding: 0;
     }
+        /* .main-store-swiper  */
     .main-store-swiper{
-        margin-top: 150px
+        margin-top: 200px;
     }
     .main-store-swiper .swiper-slide{
         padding: 1rem 0 1.5rem 0;
@@ -647,8 +663,6 @@ b{
         max-width: 80%;
         height: 0.25rem;
     }
-
-
     .main-store-swiper .swiper-slide img{
         height: 3rem;
     }
@@ -670,13 +684,14 @@ b{
     .main-store-swiper .swiper-slide p.store-price{
         font-size: 1.5rem;
     }
-
+        /* .more-button */
     .sec-main-store .btn-store-more{
         font-size: 0.9rem;
         padding: 0.5rem 1.5rem;
     }
 
-    /* sec-main-review */
+    /* 4. sec-main-review: 펫클럽 실제점주 성공 창업 후기  */
+        /* .main-store-review  */
     .sec-main-review .swiper .swiper-wrapper {
         margin: 0px 1rem;
     }
@@ -684,6 +699,7 @@ b{
         max-width: 85%;
         border-radius: 10px;
     }
+         /* review card */
     .card-review .card-head .card-head-title {
         max-width: calc(100% - 6rem);
     }
@@ -708,11 +724,11 @@ b{
         font-size: 1rem;
     }
 
-    /* sec-main-hotkeyword */
+    /* 4. sec-main-hotkeyword: 예비 점주가 궁금한 핫 키워드 바로가기   */
     .sec-main-hotkeywords{
         height: 600px;
         background-size: cover;
-        background-position: bottom;
+        background-position: left;
     }
     .sec-main-hotkeywords .sec-header h2{
         text-align: center;
@@ -733,7 +749,7 @@ b{
     }
     .sec-main-hotkeywords .keywords-list > li > a:not(.active){
         border : 0;
-        color: #999;
+        color: #696b6f;
         background: transparent;
 
     }
