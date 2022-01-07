@@ -605,6 +605,40 @@ b{
     .main-banner .swiper-button-nav{
         display: none;
     }
+    
+    /* 1-1. sec-main-info : 메인배너 하단 정보  */
+    .sec-main-info{
+        padding: 1rem 0 2rem 0!important;
+    }
+    .sec-main-info .row{
+        padding: 0 0.5rem;
+    }
+    .sec-main-info .row .col{
+        padding: 0 0.25rem;
+    }
+    .sec-main-info .info-item .info-icon{
+        background: #ececec;
+        border-radius: 50%;
+        width: 90%;
+        padding-top: 90%;
+        margin: auto;
+        position: relative;
+        margin-bottom: 0.5rem;
+    }
+    .sec-main-info .info-item .info-icon img{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+    }
+    .sec-main-info .info-item p{
+        word-break: keep-all;
+        white-space: pre-line;
+        font-size: 0.7rem;
+        text-align: center;
+        line-height: 1.56;
+    }
 
     /* 2. sec-main-feature: 펫클럽을 선택하면 성공하는 이유  */
     .sec-main-feature{
