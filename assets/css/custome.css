@@ -529,7 +529,7 @@ footer .bottom-bar .info-content p{
 
 /* 4. sec-main-hotkeyword: 예비 점주가 궁금한 핫 키워드 바로가기   */
 .sec-main-hotkeywords{
-    height: 100vh;
+    height: calc(100vh - 3rem);
     background-image: url(../image/bottom_bg.jpeg);
     background-size: cover;
     background-position: center;
@@ -781,7 +781,7 @@ footer .bottom-bar .info-content p{
 
     /* 3. sec-main-store: 펫클럽 가맹점 월매출 확인  */
     .sec-main-store .sec-content::before{
-        height: 400px;
+        height: 500px;
         top: -2rem;
         background-size: cover;
     }
@@ -791,7 +791,7 @@ footer .bottom-bar .info-content p{
     }
         /* .main-store-swiper  */
     .main-store-swiper{
-        margin-top: 200px;
+        margin-top: 300px;
     }
     .main-store-swiper .swiper-slide{
         padding: 1rem 0 1.5rem 0;

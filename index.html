@@ -777,14 +777,15 @@
 		  clickable: true,
         },
 		breakpoints: { //반응형 조건 속성
+			768:{
+				slidesPerView: 2,
+				centeredSlides: true,
+				spaceBetween: 32,
+			},
 			991: {
 				slidesPerView: 4,
 				centeredSlides: true,
 				spaceBetween: 32,
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
 			},
 		}	
 	});
