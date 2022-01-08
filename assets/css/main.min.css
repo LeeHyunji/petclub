@@ -29097,7 +29097,7 @@ body.dark-v .slide-container {
     left: 0;
     width: 0;
     height: 4px;
-    background-color: #ff4800;
+    background-color: #f0885d;
     opacity: 0;
     visibility: hidden;
     transition: all .4s ease-in-out
@@ -29117,8 +29117,8 @@ body.dark-v .slide-container {
     margin-bottom: 16px
 }
 
-.our-fzt>h3:hover {
-    color: #ff4800
+.our-fzt:hover>h3 {
+    color: #f0885d;
 }
 
 .our-fzt p {
