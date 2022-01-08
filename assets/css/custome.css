@@ -14,8 +14,10 @@ b{
 }
 
 
-
-/* header */
+/* ************************************************************* */
+/* header                                                        */
+/* ************************************************************* */
+/* 고정 header */
 .header-v8{
     padding:1rem 0;
 }
@@ -44,7 +46,13 @@ b{
     margin-left: 5rem !important;
 }
 
-/* footer : bottom-bar */
+
+
+
+/* ************************************************************* */
+/* footer                                                        */
+/* ************************************************************* */
+/* 1. 하단 고정바 bottom-bar */
 footer .bottom-bar{
     position: fixed;
     z-index: 1000;
@@ -87,6 +95,12 @@ footer .bottom-bar .info-content p{
     color: #fff;
     font-weight: 400;
     font-size: 1.25rem;
+}
+/* 기본 footer */
+footer .bottom-footer{
+    margin-bottom: 90px;
+    padding: 3rem 0;
+    border-top: solid 1px #ddd;
 }
 
 
@@ -794,7 +808,7 @@ footer .bottom-bar .info-content p{
     margin:auto;
 }
 .sec-brand .brand-more-btn {
-    margin: 3rem 0 5rem ;
+    margin-top: 3rem;
 }
 .sec-brand .brand-more-btn a{
     background: #f0885d;
@@ -885,7 +899,10 @@ footer .bottom-bar .info-content p{
         font-size: 12px; 
     }
 
-    /* footer */
+    /* ************************************************************* */
+    /* footer                                                        */
+    /* ************************************************************* */
+    /* 1. 하단 고정바 bottom-bar */
     footer .bottom-bar{
      border-radius: 5rem;
      width: calc(100% - 1rem);
@@ -938,6 +955,14 @@ footer .bottom-bar .info-content p{
     footer .bottom-bar .info-content p b{
         font-weight: 400;
     }
+    /* 2. 기본 footer */
+    footer .bottom-footer{
+        margin-top:5rem;
+        margin-bottom: 5rem;
+        padding: 3rem 0;
+    }
+
+
 
     /* 공용 */
     .container-fluid{
@@ -1361,7 +1386,7 @@ footer .bottom-bar .info-content p{
         margin:auto;
     }
     .sec-brand .brand-more-btn {
-        margin: 2rem 0 3rem ;
+        margin-top: 2rem;
     }
     .sec-brand .brand-more-btn a{
         font-size: 1rem;
