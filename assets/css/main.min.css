@@ -21691,7 +21691,7 @@ a {
     color: #fff;
     font-size: 20px;
     font-weight: 500;
-    background-color: #f59e31;
+    background-color: #f0885d;
     height: 62px;
     line-height: 62px;
     padding: 0 42px;
@@ -21706,14 +21706,14 @@ a {
 
 .btn-default.no-bg {
     background-color: transparent;
-    color: #f59e31;
-    border: 1px solid #f59e31;
+    color: #f0885d;
+    border: 1px solid #f0885d;
     -ms-box-shadow: inherit;
     box-shadow: inherit
 }
 
 .btn-default.no-bg:hover {
-    background-color: #f59e31;
+    background-color: #f0885d;
     border-color: transparent;
     color: #fff
 }

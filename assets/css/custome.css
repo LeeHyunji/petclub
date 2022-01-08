@@ -126,6 +126,10 @@ footer .bottom-footer{
     top: 50% !important;
     transform: translate(-50%,-50%) !important;
 }
+/* button */
+.btn-square{
+    border-radius: 0;
+}
 /* sec  */
 .sec-main,.sec-main-2 {
     padding: 5rem 0;
@@ -960,8 +964,61 @@ footer .bottom-footer{
     font-family: ghanachoco;
 }
 
+/* ************************************************************* */
+/* franchise-02.html 가맹정보 수익구조                                */
+/* ************************************************************* */
+.sec-franchise-bm .fzt-tab-content{
+    background : url("../image/franchise-bm.jpg");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+.sec-franchise-bm  .sec-content{
+    background: #ececec;
+}
+.sec-franchise-bm .prices-v10 .price-v10{
+    padding: 5rem 3rem;
+}
 
-
+.sec-franchise-bm .table-wrap{
+    overflow-x: auto;
+    overflow-y:hidden;
+}
+.sec-franchise-bm table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 2rem;
+}
+.sec-franchise-bm table th, .sec-franchise-bm table td{
+    padding: 2rem 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #020202;
+    white-space: nowrap;
+    min-width: 6rem;
+}
+.sec-franchise-bm table th{
+    font-weight: 500;
+    color: #f0885d;
+    font-size: 1.5rem;
+}
+.sec-franchise-bm table tr:nth-child(2n){
+    background-color: #ececec;
+}
+.sec-franchise-bm table th:first-child{
+    width: 25%;
+}
+.sec-franchise-bm .table-info{
+    background: transparent;
+    text-align: left;
+    margin-bottom: 5rem;
+}
+.sec-franchise-bm .btn-default{
+    font-size: 1.25rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+}
 
 
 /* mobile 화면 */
@@ -1570,6 +1627,42 @@ footer .bottom-footer{
         text-align: center;
     }
 
+    /* ************************************************************* */
+    /* franchise-02.html 가맹정보 수익구조                                */
+    /* ************************************************************* */
+    .sec-franchise-bm .fzt-tab-content{
+        background: unset
+    }
+    .sec-franchise-bm .prices-v10 .price-v10{
+        padding: 2rem 1rem;
+    }
+    .sec-franchise-bm .sec-content{
+        padding-top: 3rem;
+    }
+    .sec-franchise-bm table{
+        margin-bottom: 1rem;
+    }
+    .sec-franchise-bm table th, .sec-franchise-bm table td{
+        padding: 1.25rem;
+        font-size: 1rem;
+    }
+    .sec-franchise-bm table th{
+        font-size: 1.125rem;
+    }
+    .sec-franchise-bm table tr:nth-child(2n){
+        background-color: #ececec;
+    }
+    .sec-franchise-bm table th:first-child{
+        width: 25%;
+        min-width: 180px;
+    }
+    .sec-franchise-bm .table-info{
+        margin-bottom: 2rem;
+    }
+    .sec-franchise-bm .table-info p{
+       font-size: 1rem;
+       line-height: 1.56;
+}
 
 
 
