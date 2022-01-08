@@ -112,6 +112,20 @@ footer .bottom-footer{
     width: 80%;
     min-width: 1230px;
 }
+.img-cover{
+    width: 100% !important;
+    height: auto !important;
+    padding-top:100% !important;
+    position: relative !important;
+}
+.img-cover img{
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%,-50%) !important;
+}
 /* sec  */
 .sec-main,.sec-main-2 {
     padding: 5rem 0;
@@ -906,8 +920,45 @@ footer .bottom-footer{
 
 
 
-
-
+/* ************************************************************* */
+/* franchise-01.html 가맹정보 가맹소개                                */
+/* ************************************************************* */
+.franchise-banner{
+    background-image: url("../image/franchise-banner.png");
+}
+.fzt-tab .fzt-row{
+    border-top: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+}
+.fzt-tab .our-fzt{
+    padding: 2rem;
+    padding-bottom: 3rem;
+    border:0;
+    border-bottom: 1px solid #eaeaea;
+    border-left: 1px solid #eaeaea;
+}
+.fzt-tab .our-fzt:before{
+    left:2rem;
+    bottom: 3rem;
+}
+.fzt-tab .active .our-fzt{
+    background : #f0885d;
+}
+.fzt-tab .active .our-fzt:before{
+    background-color: #fff;
+}
+.fzt-tab .active .our-fzt h3, .fzt-tab .active .our-fzt p{
+    color: #fff;
+}
+/* sevice-item */
+#sec-franchise .service-item{
+    margin: auto;
+    margin-bottom: 5rem;
+}
+#service-item .service-info>h3 span{
+    color: #ddd;
+    font-family: ghanachoco;
+}
 
 
 
@@ -1473,6 +1524,57 @@ footer .bottom-footer{
         font-size: 0.9rem;
         line-height: 1.56;
     }
+
+
+
+    /* ************************************************************* */
+    /* franchise-01.html 가맹정보 가맹소개                                */
+    /* ************************************************************* */
+    .fzt-tab .our-fzt {
+        padding: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .fzt-tab .our-fzt:before{
+        left:1.5rem;
+        bottom: 1.5rem;
+    }
+    .fzt-tab .our-fzt h3{
+        font-size: 1.5rem;
+    }
+    .fzt-tab .our-fzt p{
+        font-size: 0.9rem;
+        line-height: 1.56;
+    }
+    .fzt-tab-content{
+        padding: 2rem 0;
+    }
+    /* service-item */
+    #sec-franchise .sec-header-2{
+        margin-bottom: 3rem;
+    }
+    #sec-franchise .services_items > div:last-child .service-item{
+        margin-bottom: 0 !important; 
+    }
+    #sec-franchise .service-item{
+        margin-bottom: 5rem !important;
+    }
+    #sec-franchise .service-item .service-thumb{
+        margin-bottom: 2rem;
+    }
+    #sec-franchise .service-item .service-info>h3{
+        font-size : 2rem;
+        margin-bottom: 1rem;
+    }
+    #sec-franchise .service-item .service-info p{
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+
+
+
+
+
 }
 
 
