@@ -22435,7 +22435,7 @@ header .header-content .btn-default i {
 }
 
 .featured-post-sec .featured-post .featured-post-text .btn-default:hover {
-    background-color: #f0885d;
+    background-color: #f59e31;
     color: #fff
 }
 
@@ -29700,8 +29700,8 @@ body.dark-v .slide-container {
 }
 
 .services_v9 .service-v9:hover {
-    -ms-box-shadow: 0 150px 200px rgba(55, 67, 84, .25);
-    box-shadow: 0 150px 200px rgba(55, 67, 84, .25)
+    -ms-box-shadow: 0 30px 30px rgba(55, 67, 84, .1);
+    box-shadow: 0 30px 30px rgba(55, 67, 84, .1)
 }
 
 .services_v9 .service-v9:hover .s-icon {
@@ -30339,8 +30339,8 @@ body.dark-v .slide-container {
 }
 
 .prices-v10 .price-v10:hover {
-    -ms-box-shadow: 0 150px 200px rgba(55, 67, 84, .25);
-    box-shadow: 0 150px 200px rgba(55, 67, 84, .25)
+    -ms-box-shadow: 0 30px 30px rgba(55, 67, 84, .1);
+    box-shadow: 0 30px 30px rgba(55, 67, 84, .1)
 }
 
 .prices-v10 .price-v10 .recommended {
