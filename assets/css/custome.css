@@ -929,9 +929,9 @@ table.main-table tr:nth-child(2n){
     font-weight: 600;
     line-height: 1.56;
 }
-.sec-board-list .blog-sidebar .widget-categories ul li:first-child a,.sec-board-list .blog-sidebar .widget-categories ul li:first-child>span{
+/* .sec-board-list .blog-sidebar .widget-categories ul li:first-child a,.sec-board-list .blog-sidebar .widget-categories ul li:first-child>span{
     font-weight: 600;
-}
+} */
 .sec-board-list .blog-sidebar .widget-categories ul li a,.sec-board-list .blog-sidebar .widget-categories ul li>span{
     font-weight: 400;
 }
@@ -968,6 +968,11 @@ table.main-table tr:nth-child(2n){
     width:100%;
     height: 100%;
     object-fit: cover;
+}
+.blog-sidebar .widget-categories ul li.active a, .blog-sidebar .widget-categories ul li.active span{
+    padding-bottom: 0.5rem;
+    color: #020202;
+    font-weight: 600 !important;
 }
 
 
@@ -1703,7 +1708,7 @@ table.main-table tr:nth-child(2n){
     .sec-board-list .sidebar{
         max-width: 540px;
         margin:auto;
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
         margin-top:0;
     }
     .sec-board-list .blog-sidebar .widget{
@@ -1714,9 +1719,13 @@ table.main-table tr:nth-child(2n){
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
     }
+    .sec-board-list .blog-sidebar .widget-search{
+        padding: 0 1rem;
+    }
     .sec-board-list .blog-sidebar .widget-categories ul{
         display: flex;
         justify-content: space-around;
+        border-bottom: solid 1px #ddd;
     }
     .sec-board-list .blog-sidebar .widget-categories ul li{
         padding: 0;
@@ -1728,7 +1737,16 @@ table.main-table tr:nth-child(2n){
     .sec-board-list .blog-sidebar .widget-categories ul li>span{
         display: none;
     }
+    .blog-sidebar .widget-categories ul li.active a, .blog-sidebar .widget-categories ul li.active span{
+        padding-bottom: 0.5rem;
+        color: #020202;
+        font-weight: 600 !important;
+        border-bottom: solid 2px #020202;
+    }
     /* post */
+    .sec-board-list .blog-posts-layout2 {
+        margin:auto;
+    }
     .sec-board-list .blog-posts-layout2 .bg-post .bg-post-thumb{
         height: 180px;
     }
@@ -1910,6 +1928,41 @@ table.main-table tr:nth-child(2n){
     .sec-about-count .counter-sec-v6 li .counter-cont h2{
         font-size: 4rem;
     }
+
+     
+
+
+
+    /* ************************************************************* */
+    /* board.html 뉴스&이벤트                                           */
+    /* ************************************************************* */
+    .sec-board-list .blog-posts-layout2,.sec-board-list .sidebar{
+        margin-left:-15px;
+        margin-right:-15px;
+    }
+    .sec-board-list .blog-posts-layout2 .bg-post{
+        margin-bottom: 2rem;
+    }
+    .sec-board-list .blog-posts-layout2 .bg-post .bg-post-thumb{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .sec-board-list .blog-posts-layout2 .bg-post .bg-post-thumb>img{
+        border-radius: 0;
+    }
+    .sec-board-list .blog-posts-layout2 .bg-post .bg-post-info{
+        text-align: left;
+        padding: 1rem;
+        margin-top: 0;
+    }
+    .sec-board-list .blog-posts-layout2 .bg-post .bg-post-info>h2, .sec-board-list .blog-sidebar .wd-posts .pp-post>h3{
+        margin-bottom: 0.5rem;
+    }
+
+
+
+
 }
 
 
