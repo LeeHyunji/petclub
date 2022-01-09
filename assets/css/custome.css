@@ -26,7 +26,7 @@ b{
 }
 .header-content-v8 .logo-v8 img{
         height: 3rem;
-    }
+}
 .header-content-v8 nav ul li{
     padding: 0 1.25rem;
 }
@@ -45,7 +45,27 @@ b{
 .nav-toggle-btn{
     margin-left: 5rem !important;
 }
-
+/* responsive menu */
+.responsive-menu{
+    /* padding: 0; */
+}
+.responsive-menu:before{
+    /* display: none; */
+}
+.responsive-menu .rep-header{
+    padding: 1rem 0;
+}
+.responsive-menu .rep-logo img{
+    height: 3rem;
+}
+.responsive-menu .close-menu{
+    margin-right: 1rem;
+}
+    /* menu-list */
+.responsive-menu .mobile-menu ul{
+    /* background: #ececec; */
+    padding: 1rem 2rem 2rem 2rem;
+}
 
 
 
