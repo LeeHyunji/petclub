@@ -198,8 +198,40 @@ footer .bottom-footer{
     color: #fff;
     font-size: 2rem;
 }
-
-
+/* table */
+.table-wrap{
+    overflow-x: auto;
+    overflow-y:hidden;
+}
+table.main-table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 2rem;
+}
+table.main-table th, table.main-table td{
+    padding: 2rem 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #020202;
+    white-space: nowrap;
+    min-width: 6rem;
+    vertical-align: middle;
+}
+table.main-table th{
+    font-weight: 500;
+    color: #f0885d;
+    font-size: 1.5rem;
+}
+table.main-table tr:nth-child(2n){
+    background-color: #ececec;
+}
+.table-info{
+    background: transparent;
+    text-align: left;
+    margin-bottom: 5rem;
+}
 
 
 /* ************************************************************* */
@@ -967,7 +999,7 @@ footer .bottom-footer{
 /* ************************************************************* */
 /* franchise-02.html 가맹정보 수익구조                                */
 /* ************************************************************* */
-.sec-franchise-bm .fzt-tab-content{
+.sec-franchise-bm .fzt-tab-content, .sec-franchise-process .fzt-tab-content{
     background : url("../image/franchise-bm.jpg");
     background-position: top right;
     background-repeat: no-repeat;
@@ -978,47 +1010,80 @@ footer .bottom-footer{
 .sec-franchise-bm .prices-v10 .price-v10{
     padding: 5rem 3rem;
 }
-
-.sec-franchise-bm .table-wrap{
-    overflow-x: auto;
-    overflow-y:hidden;
-}
-.sec-franchise-bm table{
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
-    margin-bottom: 2rem;
-}
-.sec-franchise-bm table th, .sec-franchise-bm table td{
-    padding: 2rem 0;
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #020202;
-    white-space: nowrap;
-    min-width: 6rem;
-}
-.sec-franchise-bm table th{
-    font-weight: 500;
-    color: #f0885d;
-    font-size: 1.5rem;
-}
-.sec-franchise-bm table tr:nth-child(2n){
-    background-color: #ececec;
-}
+/* table */
 .sec-franchise-bm table th:first-child{
     width: 25%;
-}
-.sec-franchise-bm .table-info{
-    background: transparent;
-    text-align: left;
-    margin-bottom: 5rem;
 }
 .sec-franchise-bm .btn-default{
     font-size: 1.25rem;
     height: 3.5rem;
     line-height: 3.5rem;
 }
+
+
+/* ************************************************************* */
+/* franchise-03.html 가맹정보 비용및절차                              */
+/* ************************************************************* */
+/* 1. process slider */
+.sec-franchise-process .service_v1_content > .sec-header-2{
+    padding-bottom: 5rem; 
+}
+.sec-franchise-process .our-services-sec{
+    background-color: #fef2d9;
+    padding: 8rem 0;
+}
+.sec-franchise-process .our-services-sec .our-services-content .svs-slider .slick-next,.sec-franchise-process .our-services-sec .our-services-content .svs-slider .slick-prev{
+    top: -2rem;
+}
+.our-services-sec .our-services-content .svs-slider .slick-next:hover:before, .our-services-sec .our-services-content .svs-slider .slick-prev:hover:before{
+    color: #f0885d;
+}
+.sec-franchise-process .our-services-sec .our-services-content .service-card-mile{
+    padding: 3rem;
+    margin-bottom: 0rem;
+}
+.our-services-sec .our-services-content .service-card-mile .cat-up{
+    right:auto;
+    left: 3rem;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color : #f0885d;
+}
+.our-services-sec .our-services-content .service-card-mile>img{
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+}
+.our-services-sec .our-services-content .service-card-mile p{
+    min-height: 3.5rem;
+}
+/* 2. 펫클럽 창업 예상비용 */
+.franchise-cost{
+    padding: 3rem 0;
+}
+.sec-franchise-process table td,.sec-franchise-process table th{
+    border-left:solid 1px #ddd;
+    border-top: solid 1px #ddd;
+}
+.sec-franchise-process table td:first-child{
+    font-weight: 600;
+    width: 20%;
+}
+.sec-franchise-process .btn-default{
+    font-size: 1.25rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* mobile 화면 */
@@ -1134,6 +1199,27 @@ footer .bottom-footer{
         white-space: pre-line;
         font-size: 1.25rem;
         line-height: 1.56;
+    }
+    /* table */
+    table.main-table{
+        margin-bottom: 1rem;
+    }
+    table.main-table th,table.main-table td{
+        padding: 1.25rem;
+        font-size: 1rem;
+    }
+    table.main-table th{
+        font-size: 1.125rem;
+    }
+    table.main-table tr:nth-child(2n){
+        background-color: #ececec;
+    }
+    .table-info{
+        margin-bottom: 2rem;
+    }
+    .table-info p{
+       font-size: 1rem;
+       line-height: 1.56;
     }
 
     /* ************************************************************* */
@@ -1639,31 +1725,58 @@ footer .bottom-footer{
     .sec-franchise-bm .sec-content{
         padding-top: 3rem;
     }
-    .sec-franchise-bm table{
-        margin-bottom: 1rem;
-    }
-    .sec-franchise-bm table th, .sec-franchise-bm table td{
-        padding: 1.25rem;
-        font-size: 1rem;
-    }
-    .sec-franchise-bm table th{
-        font-size: 1.125rem;
-    }
-    .sec-franchise-bm table tr:nth-child(2n){
-        background-color: #ececec;
-    }
+        /* table  */
     .sec-franchise-bm table th:first-child{
         width: 25%;
         min-width: 180px;
     }
-    .sec-franchise-bm .table-info{
-        margin-bottom: 2rem;
-    }
-    .sec-franchise-bm .table-info p{
-       font-size: 1rem;
-       line-height: 1.56;
-}
 
+
+
+    /* ************************************************************* */
+    /* franchise-03.html 가맹정보 비용및절차                              */
+    /* ************************************************************* */
+    /* 1. process slider */
+    .sec-franchise-process .fzt-tab-content{
+        background: unset
+    }
+    .sec-franchise-process .service_v1_content > .sec-header-2{
+        padding-bottom: 0rem; 
+    }
+    .sec-franchise-process .our-services-sec{
+        padding: 5rem 0;
+    }
+    .our-services-sec .our-services-content .svs-slider .slick-next:before, .our-services-sec .our-services-content .svs-slider .slick-prev:before{
+        font-size: 1rem;
+    }
+    .sec-franchise-process .our-services-sec .our-services-content .svs-slider .slick-next, .sec-franchise-process .our-services-sec .our-services-content .svs-slider .slick-prev{
+        top: -1rem;
+    }
+    .our-services-sec .our-services-content .service-card-mile .cat-up{
+        position:absolute;
+        top: 2rem;
+        left:2rem;
+    }
+    .sec-franchise-process .our-services-sec .our-services-content .svs-slider .slick-slide{
+        padding: 0 0.5rem ;
+    }
+    .sec-franchise-process .our-services-sec .our-services-content .service-card-mile{
+        padding: 2rem;
+    }
+    .our-services-sec .our-services-content .service-card-mile>h2{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    .our-services-sec .our-services-content .service-card-mile p{
+        font-size: 1rem;
+        text-align: left;
+        line-height: 1.56;
+        min-height: 5rem;
+    }
+    /* 2. franchise-cost : 펫클럽 창업 예상비용  */
+    .prices-v10 .price-v10{
+        padding: 1rem;
+    }
 
 
 
