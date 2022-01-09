@@ -999,6 +999,9 @@ table.main-table tr:nth-child(2n){
 /* ************************************************************* */
 /* franchise-02.html 가맹정보 수익구조                                */
 /* ************************************************************* */
+.sec-franchise-bm{
+    padding-bottom: 0;
+}
 .sec-franchise-bm .fzt-tab-content, .sec-franchise-process .fzt-tab-content{
     background : url("../image/franchise-bm.jpg");
     background-position: top right;
@@ -1006,6 +1009,7 @@ table.main-table tr:nth-child(2n){
 }
 .sec-franchise-bm  .sec-content{
     background: #ececec;
+    padding-bottom: 5rem;
 }
 .sec-franchise-bm .prices-v10 .price-v10{
     padding: 5rem 3rem;
@@ -1150,7 +1154,7 @@ table.main-table tr:nth-child(2n){
     }
     /* 2. 기본 footer */
     footer .bottom-footer{
-        margin-top:5rem;
+        margin-top:0rem;
         margin-bottom: 5rem;
         padding: 3rem 0;
     }
@@ -1716,14 +1720,19 @@ table.main-table tr:nth-child(2n){
     /* ************************************************************* */
     /* franchise-02.html 가맹정보 수익구조                                */
     /* ************************************************************* */
+    .sec-franchise-bm{
+        padding-bottom: 0;
+    }
     .sec-franchise-bm .fzt-tab-content{
-        background: unset
+        background: unset;
+        padding-bottom: 0;
     }
     .sec-franchise-bm .prices-v10 .price-v10{
         padding: 2rem 1rem;
     }
     .sec-franchise-bm .sec-content{
         padding-top: 3rem;
+        padding-bottom: 5rem;
     }
         /* table  */
     .sec-franchise-bm table th:first-child{
