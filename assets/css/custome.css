@@ -46,12 +46,6 @@ b{
     margin-left: 5rem !important;
 }
 /* responsive menu */
-.responsive-menu{
-    /* padding: 0; */
-}
-.responsive-menu:before{
-    /* display: none; */
-}
 .responsive-menu .rep-header{
     padding: 1rem 0;
 }
@@ -63,7 +57,6 @@ b{
 }
     /* menu-list */
 .responsive-menu .mobile-menu ul{
-    /* background: #ececec; */
     padding: 1rem 2rem 2rem 2rem;
 }
 
@@ -855,21 +848,25 @@ table.main-table tr:nth-child(2n){
 }
 .sec-about-history .histroy-item ul li{
     color: #020202;
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 2;
 }
+.sec-about-history .histroy-item ul li::before {
+    content: "ㆍ";
+  }
 
 /* 5. sec-brand : 브랜드 소개 섹션 */
 .sec-brand .fzt-row{
-    border-top: 1px solid #eaeaea;
-    border-right: 1px solid #eaeaea;  
+    /* justify-content: center; */
+    /* border-top: 1px solid #eaeaea; */
+    /* border-right: 1px solid #eaeaea;   */
 }
 .sec-brand .our-fzt{
     padding: 2rem;
     padding-bottom: 3rem;
-    border:0;
-    border-bottom: 1px solid #eaeaea;
-    border-left: 1px solid #eaeaea;
+    /* border:0; */
+    /* border-bottom: 1px solid #eaeaea;
+    border-left: 1px solid #eaeaea; */
 }
 .sec-brand .our-fzt:before{
     display: none;;
@@ -1602,7 +1599,7 @@ table.main-table tr:nth-child(2n){
         font-size: 1rem;   
     }
     .sec-about-history .histroy-item ul li{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     /* 5. sec-brand : 브랜드 소개 섹션 */
     .sec-brand .our-fzt{
@@ -1613,7 +1610,7 @@ table.main-table tr:nth-child(2n){
         display: none;;
     }
     .sec-brand .our-fzt>h3{
-        font-size: 1.125rem;
+        font-size: 1rem;
         margin-bottom: 0.5rem;
     }
     .sec-brand .brand-icon{
