@@ -695,7 +695,7 @@ table.main-table tr:nth-child(2n){
 
 
 /* ************************************************************* */
-/* about.html 브랜드소개                                            */
+/* about.html 펫클럽소개                                            */
 /* ************************************************************* */
 /* 1. about-banner : about.html 배너 */
 .about-banner .featured-post-sec .featured-post{
@@ -1096,7 +1096,13 @@ table.main-table tr:nth-child(2n){
     line-height: 3.5rem;
 }
 
-
+/* ************************************************************* */
+/* brand.html 브랜드                                           */
+/* ************************************************************* */
+/* 1. brand-banner : brand.html 배너 */
+.brand-banner{
+    background-image: url("../image/brand-banner.png");
+}
 
 
 
