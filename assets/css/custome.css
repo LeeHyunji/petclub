@@ -555,13 +555,13 @@ table.main-table tr:nth-child(2n){
     background : #ececec;
 }
     /* .main-store-review  */
-.sec-main-review .swiper-pagination{
+.sec-main-review .swiper-pagination,.sec-franchise-sales .franchise-review .swiper-pagination{
     margin-top: 2rem;
 }
-.sec-main-review .swiper-pagination-bullet{
+.sec-main-review .swiper-pagination-bullet,.sec-franchise-sales .franchise-review .swiper-pagination-bullet{
      background : #fff;
 }
-.sec-main-review .swiper-pagination-bullet.swiper-pagination-bullet-active{
+.sec-main-review .swiper-pagination-bullet.swiper-pagination-bullet-active,.sec-franchise-sales .franchise-review .swiper-pagination-bullet.swiper-pagination-bullet-active{
     background: #f0885d;
 }
     /* review card */
@@ -578,11 +578,13 @@ table.main-table tr:nth-child(2n){
 }
 .card-review .card-head .card-head-title{
     max-width: calc(100% - 7rem);
+    line-height: 1.56;
 }
 .card-review .card-head .store-name{
     color: #020202;
+    font-size: 1.25rem;
 }
-.card-review .card-head h5{
+.card-review h5{
     margin: 0.5rem 0;
     color: #020202;
     font-weight: 700;
@@ -595,6 +597,7 @@ table.main-table tr:nth-child(2n){
     font-size: 1.25rem;
     display: flex;
     align-items: center;
+    margin-top: 1rem;
 }
 .card-review .card-head .review-star p{
     margin-right: 0.5rem;
@@ -628,6 +631,7 @@ table.main-table tr:nth-child(2n){
     color : #fff;
     font-size: 1.5rem;
     font-weight: 700;
+    line-height: 1.56;
     margin-bottom: 1.5rem;
 }
 .card-review .card-body p{
@@ -1024,9 +1028,9 @@ table.main-table tr:nth-child(2n){
 .sec-franchise-bm{
     padding-bottom: 0;
 }
-.sec-franchise-bm .fzt-tab-content, .sec-franchise-process .fzt-tab-content{
+.sec-franchise-bm .fzt-tab-content, .sec-franchise-process .fzt-tab-content,.sec-franchise-sales .fzt-tab-content{
     background : url("../image/franchise-bm.jpg");
-    background-position: top right;
+    background-position: right -15px;
     background-repeat: no-repeat;
 }
 .sec-franchise-bm  .sec-content{
@@ -1050,10 +1054,10 @@ table.main-table tr:nth-child(2n){
 /* ************************************************************* */
 /* franchise-03.html 가맹정보 비용및절차                              */
 /* ************************************************************* */
-/* 1. process slider */
-.sec-franchise-process .service_v1_content > .sec-header-2{
-    padding-bottom: 5rem; 
+.sec-franchise-process .service_v1_content > .sec-header-2,.sec-franchise-sales .service_v1_content > .sec-header-2{
+    padding-bottom: 7rem; 
 }
+/* 1. process slider */
 .sec-franchise-process .our-services-sec{
     background-color: #fef2d9;
     padding: 8rem 0;
@@ -1100,6 +1104,123 @@ table.main-table tr:nth-child(2n){
     height: 3.5rem;
     line-height: 3.5rem;
 }
+
+
+
+/* ************************************************************* */
+/* franchise-04.html 가맹정보 비용및절차                              */
+/* ************************************************************* */
+/* 1. table  */
+.sec-franchise-sales,.sec-franchise-sales .sec-content{
+    padding-bottom: 0;
+}
+.sec-franchise-sales .fzt-tab-content .franchise-cost{
+    background-image: url("../image/earn_bg.png");
+    background-color: #fff;
+    background-size: contain;
+    background-repeat: repeat-y;
+}
+.sec-franchise-sales table.main-table th{
+    background: #f0885d;
+    color: #fff;
+    border-left:solid 1px #ddd;
+    border-top: solid 1px #ddd;
+}
+.sec-franchise-sales table.main-table td{
+    background: #fff;
+    border-left:solid 1px #ddd;
+    border-top: solid 1px #ddd;
+    width: 25%;
+}
+.sec-franchise-sales table.main-table tr:nth-child(2) td,.sec-franchise-sales table.main-table tr td:nth-child(1){
+    background: #ececec;
+}
+.sec-franchise-sales table.main-table td.point{
+    color: #e10000;
+    font-weight:600;
+}
+/* 2. reveiw  */
+.sec-franchise-sales .franchise-review{
+    background : #ececec;
+}
+.franchise-review .card-review{
+    background : #fff;
+    padding: 2rem;
+}
+.franchise-review .card-review .card-head{
+    align-items: flex-start;
+    justify-content: flex-start;
+    background : #fff;
+    
+}
+.franchise-review .card-review .card-head .card-head-title{
+    margin-left: 1rem;
+}
+.sec-franchise-sales .franchise-review {
+    padding: 3rem 0;
+}
+.franchise-review .card-review .card-body{
+    background : transparent;
+}
+.franchise-review .card-review .card-body h5{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.56;
+    text-overflow: unset;
+    white-space: normal;
+    overflow: initial;
+}
+.franchise-review .card-review .card-body h6{
+    color: #e10000;
+    font-size: 1.25rem;
+    line-height: 2;
+    font-weight: 400;
+    text-overflow: unset;
+    white-space: normal;
+    overflow: initial;
+}
+.franchise-review .card-review .card-body p{
+    color: #020202;
+    line-height: 2;
+    margin-bottom: 2rem;
+
+    text-overflow: unset;
+    white-space: normal;
+    overflow: initial;
+    display: block;
+}
+/* main-banner swiper.js nav버튼 */
+.franchise-review .swiper{
+    margin-left: -5rem;
+    margin-right: -5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.franchise-review .swiper-button-nav{ 
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.franchise-review .swiper-button-next, .franchise-review .swiper-rtl .swiper-button-prev{
+    right: 0;
+    color: #b7b6b4;
+}
+.franchise-review .swiper-button-prev, .franchise-review  .swiper-rtl .swiper-button-next{
+    left: 0;
+    color: #b7b6b4;
+}
+
+
+
+
+
+
+
+
+
 
 /* ************************************************************* */
 /* brand.html 브랜드                                           */
@@ -1689,7 +1810,7 @@ table.main-table tr:nth-child(2n){
         background: #f0885d;
         box-shadow: 0px 3px 5px rgba(0,0,0 ,.2);
     }
-
+    
 
 
    
@@ -1833,10 +1954,10 @@ table.main-table tr:nth-child(2n){
     /* franchise-03.html 가맹정보 비용및절차                              */
     /* ************************************************************* */
     /* 1. process slider */
-    .sec-franchise-process .fzt-tab-content{
+    .sec-franchise-process .fzt-tab-content,.sec-franchise-sales .fzt-tab-content{
         background: unset
     }
-    .sec-franchise-process .service_v1_content > .sec-header-2{
+    .sec-franchise-process .service_v1_content > .sec-header-2,.sec-franchise-sales .service_v1_content > .sec-header-2{
         padding-bottom: 0rem; 
     }
     .sec-franchise-process .our-services-sec{
@@ -1876,6 +1997,33 @@ table.main-table tr:nth-child(2n){
 
 
     /* ************************************************************* */
+    /* franchise-04.html 가맹정보 비용및절차                              */
+    /* ************************************************************* */
+    .sec-franchise-sales .fzt-tab-content .franchise-cost{
+        background-size: 150%;
+        background-repeat: repeat-y;
+        background-position: center;
+    }
+    .sec-franchise-sales.sec-main .fzt-tab-content .franchise-cost .sec-header-2 h2{
+        font-size: 1.5rem;
+    }
+    .franchise-review .card-review{
+        padding: 1rem;
+    }
+    /* swiper.js nav버튼 */
+    .franchise-review .swiper{
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .franchise-review .swiper-button-nav{ 
+        display: none;
+    }
+   
+
+
+    /* ************************************************************* */
     /* brand.html 브랜드                                           */
     /* ************************************************************* */
     /* 1. brand-banner : brand.html 배너 */
@@ -1900,6 +2048,15 @@ table.main-table tr:nth-child(2n){
         top:2rem;
         right:2rem;
     }
+    /* .franchise-review .card-review .card-body h5{
+       line-height: 1.56;
+    }
+    .franchise-review .card-review .card-body h6{
+        line-height: 1.56;
+    }
+    .franchise-review .card-review .card-body p{
+        line-height: 1.56;
+    } */
 
 }
 
