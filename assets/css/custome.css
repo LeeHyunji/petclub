@@ -918,10 +918,10 @@ table.main-table tr:nth-child(2n){
     border-radius: 7px;
     object-fit: cover;
 }
-.sec-board-list .blog-posts-layout2 .bg-post .bg-post-info .meta li,.sec-board-list .blog-sidebar .wd-posts .pp-post>span{
+.sec-board .blog-posts-layout2 .bg-post .bg-post-info .meta li,.sec-board .blog-sidebar .wd-posts .pp-post>span{
     color: #b7b6b4;
 }
-.sec-board-list .blog-posts-layout2 .bg-post .bg-post-info .meta li:before{
+.sec-board .blog-posts-layout2 .bg-post .bg-post-info .meta li:before{
     background-color: #b7b6b4;
 }
 .sec-board-list .blog-posts-layout2 .bg-post .bg-post-info>h2 {
@@ -947,13 +947,13 @@ table.main-table tr:nth-child(2n){
     -webkit-box-orient: vertical;
 }
 /* wedget */
-.sec-board-list .blog-sidebar .widget{
+.sec-board .blog-sidebar .widget{
     margin-bottom: 5rem;
 }
-.sec-board-list .blog-sidebar .widget-title{
+.sec-board .blog-sidebar .widget-title{
     margin-bottom: 2rem;
 }
-.sec-board-list .blog-sidebar .widget-search form input{
+.sec-board .blog-sidebar .widget-search form input{
     width: 100%;
     color: #696b6f;
     font-size: 1rem;
@@ -962,24 +962,33 @@ table.main-table tr:nth-child(2n){
     border: 1px solid #ddd;
     border-radius: 30px;
 }
-.blog-sidebar .widget-search form button{
+.sec-board .blog-sidebar .widget-search form button{
     right: 1rem;
 }
-.sec-board-list .blog-sidebar .widget-adver{
+.sec-board .blog-sidebar .widget-adver{
     height: 300px;
 }
-.sec-board-list .blog-sidebar .widget-adver>img{
+.sec-board .blog-sidebar .widget-adver>img{
     width:100%;
     height: 100%;
     object-fit: cover;
 }
-.blog-sidebar .widget-categories ul li.active a, .blog-sidebar .widget-categories ul li.active span{
+.sec-board .blog-sidebar .widget-categories ul li.active a, .sec-board .blog-sidebar .widget-categories ul li.active span{
     padding-bottom: 0.5rem;
     color: #020202;
     font-weight: 600 !important;
 }
-
-
+/* ************************************************************* */
+/* post.html 뉴스&이벤트                                            */
+/* ************************************************************* */
+.sec-board-detail .single-post-layout1 .blog-posts-layout2 .bg-post .bg-post-info .meta{
+    margin-bottom: 1rem;
+    line-height: 1.56;
+}
+.sec-board-detail .blog-posts-layout2 .bg-post .bg-post-info p{
+    color: #020202;
+    margin-bottom : 2rem;
+}
 
 
 /* ************************************************************* */
@@ -1818,47 +1827,47 @@ table.main-table tr:nth-child(2n){
     /* board.html 뉴스&이벤트                                             */
     /* ************************************************************* */
     /* 1. board-banner 뉴스배너 */
-    /* 2. sec-board-list : 뉴스&이벤트 리스트 */
-    .sec-board-list .blog-main-content{
+    /* 2. sec-board : 뉴스&이벤트 리스트 */
+    .sec-board .blog-main-content{
         padding: 0;
     }
-    .sec-board-list .blog-main-content .row{
+    .sec-board .blog-main-content .row , .sec-board .single-post-layout1 .row{
         flex-direction: column-reverse !important;
     }
     /* wedget */
-    .sec-board-list .sidebar{
+    .sec-board .sidebar{
         max-width: 540px;
         margin:auto;
         margin-bottom: 2rem;
         margin-top:0;
     }
-    .sec-board-list .blog-sidebar .widget{
+    .sec-board .blog-sidebar .widget{
         margin-bottom: 3rem;
     }
-    .sec-board-list .blog-sidebar .widget-title{
+    .sec-board .blog-sidebar .widget-title{
         text-align: center;
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
     }
-    .sec-board-list .blog-sidebar .widget-search{
+    .sec-board .blog-sidebar .widget-search{
         padding: 0 1rem;
     }
-    .sec-board-list .blog-sidebar .widget-categories ul{
+    .sec-board .blog-sidebar .widget-categories ul{
         display: flex;
         justify-content: space-around;
         border-bottom: solid 1px #ddd;
     }
-    .sec-board-list .blog-sidebar .widget-categories ul li{
+    .sec-board .blog-sidebar .widget-categories ul li{
         padding: 0;
         border-bottom: 0;
     }
-    .sec-board-list .blog-sidebar .widget-categories ul li:first-child a, .sec-board-list .blog-sidebar .widget-categories ul li:first-child>span{
+    .sec-board .blog-sidebar .widget-categories ul li:first-child a, .sec-board .blog-sidebar .widget-categories ul li:first-child>span{
         font-weight: 400;
     }
-    .sec-board-list .blog-sidebar .widget-categories ul li>span{
+    .sec-board .blog-sidebar .widget-categories ul li>span{
         display: none;
     }
-    .blog-sidebar .widget-categories ul li.active a, .blog-sidebar .widget-categories ul li.active span{
+    .sec-board .blog-sidebar .widget-categories ul li.active a, .blog-sidebar .widget-categories ul li.active span{
         padding-bottom: 0.5rem;
         color: #020202;
         font-weight: 600 !important;
@@ -1880,6 +1889,39 @@ table.main-table tr:nth-child(2n){
         line-height: 1.56;
     }
 
+
+    /* ************************************************************* */
+    /* post.html 뉴스&이벤트                                           */
+    /* ************************************************************* */
+
+    .sec-board-detail .single-post-layout1 .blog-posts-layout2{
+        margin:auto;
+    }
+    .sec-board-detail .single-post-layout1 .blog-posts-layout2 .bg-post .bg-post-info>h2{
+        line-height: 1.56;
+        text-align: left;
+        margin-bottom: 5rem;
+        font-size: 1.75rem;
+    }
+    .sec-board-detail .single-post-layout1 .blog-posts-layout2 .bg-post .bg-post-info p{
+        font-size: 1.125rem;
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+    .single-post-layout1 .blog-posts-layout2 .bg-post{
+        margin-bottom: 2rem;
+    }
+    .sec-board-detail .single-post-layout1 .blog-posts-layout2 .bg-posted-author{
+        padding: 2rem;
+        padding-top:0;
+    }
+    .sec-board-detail .single-post-layout1 .blog-posts-layout2 .bg-posted-author .author-info{
+        width: 100%;
+        padding-left:0;
+    }
+    .sec-board-detail .single-post-layout1 .blog-posts-layout2 .bg-posted-author .author-info a{
+        color: #696b6f
+    }
 
 
     /* ************************************************************* */
@@ -2093,7 +2135,7 @@ table.main-table tr:nth-child(2n){
     /* ************************************************************* */
     /* board.html 뉴스&이벤트                                           */
     /* ************************************************************* */
-    .sec-board-list .blog-posts-layout2,.sec-board-list .sidebar{
+    .sec-board .single-post-layout1 .blog-posts-layout2,.sec-board .sidebar{
         margin-left:-15px;
         margin-right:-15px;
     }
@@ -2116,8 +2158,18 @@ table.main-table tr:nth-child(2n){
     .sec-board-list .blog-posts-layout2 .bg-post .bg-post-info>h2, .sec-board-list .blog-sidebar .wd-posts .pp-post>h3{
         margin-bottom: 0.5rem;
     }
+    /* ************************************************************* */
+    /* post.html 뉴스&이벤트                                           */
+    /* ************************************************************* */
 
-
+    .sec-board-detail .single-post-layout1 .blog-posts-layout2 .bg-post {
+        padding : 0 1rem;
+    }
+    .sec-board-detail .single-post-layout1 .blog-posts-layout2 .bg-post .bg-post-info .meta{
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    
 
 
 }
