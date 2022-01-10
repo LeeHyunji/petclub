@@ -180,7 +180,7 @@ footer .bottom-footer{
     color: #f0885d;
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom:1rem;
+    margin-bottom:0.5rem;
 }
 .sec-main .sec-header-2 p{
     max-width: 760px;
@@ -1253,7 +1253,7 @@ table.main-table tr:nth-child(2n){
     }
     .sec-main .sec-header-2 span.sub-title{
         font-size: 1rem;
-        margin-bottom:0.5rem;
+        margin-bottom:0.25rem;
     }
     .sec-main .sec-header-2 p{
         margin-top: 1.5rem;
