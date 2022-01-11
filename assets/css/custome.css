@@ -245,6 +245,110 @@ table.main-table tr:nth-child(2n){
     text-align: left;
     margin-bottom: 5rem;
 }
+/* modal */
+.modal .modal-dialog{
+    max-width: 760px;
+    margin-top: 7rem;
+    border:0;
+    box-shadow: 0 30px 30px rgba(0,0,0,0.3);
+}
+.modal .modal-dialog .modal-content{
+    border:0;
+}
+.modal .modal-dialog .modal-header{
+    background: #fdfbe9;
+    justify-content: center;
+    color: #020202;
+    font-size: 1.5rem;;
+    padding: 1.25rem 1rem ;
+    font-weight: 600;
+    position: relative;
+    align-items: center;
+    border:0;
+}
+.btn-close {
+    position:absolute;
+    right:1rem;
+    box-sizing: content-box;
+    width: 5px;
+    height: 5px;
+    padding: 0.25em 0.25em;
+    color: #000;
+    background: transparent url("../image/btn-close.svg") center/1em auto no-repeat;
+    border: 0;
+    border-radius: 0.25rem;
+    opacity: .5;
+}
+.modal .modal-dialog .modal-body{
+    padding: 2rem 1rem;
+}
+.modal .modal-dialog .launch-info-table{
+    border-top: solid 1px #696b6f;
+    border-bottom:  solid 1px #696b6f;
+}
+.modal .modal-dialog .launch-info-table .launch-info-row{
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px #ddd;
+    padding: 1rem 0;
+}
+.modal .modal-dialog .launch-info-table .launch-info-row:last-child{
+    border-bottom: 0;
+}
+.modal .modal-dialog .launch-info-table .launch-info-row .launch-step{
+    width: 25%;
+    flex : 0 0 20%;
+    -ms-flex: 0 0 20%;
+    max-width: 20%;
+    text-align: center;
+    color: #f0885d;
+}
+.modal .modal-dialog h6{
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+.modal .modal-dialog p,.modal .modal-dialog span{
+    font-size: 1rem;
+    line-height: 1.56;
+}
+.modal .modal-dialog .launch-document{
+    padding: 1rem;
+    margin: 1rem 0;
+    color: #020202;
+}
+.modal .modal-dialog .launch-document ol {
+    padding-left: 1rem;
+    margin: 0.5rem 0;
+}
+.modal .modal-dialog .launch-document ol li{
+    list-style: auto;
+    line-height: 1.56;
+
+}
+.modal .modal-dialog .btn-footer{
+    border-radius: 3rem;
+    background: #f0885d;
+    padding: 0.75rem 2rem;
+    border:0;
+    box-shadow: 0 3rem 10rem rgba(0,0,0 ,.2);
+}
+
+
+#productModal .product-item{
+    display: flex;
+    padding: 1rem;
+}
+#productModal .product-item .product_img_cover{
+    width: 200px;
+}
+#productModal .product-info{
+    color: #020202;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+#productModal.modal .modal-dialog h6{
+    margin-bottom: 0.5rem;
+}
 
 
 /* ************************************************************* */
@@ -892,9 +996,16 @@ table.main-table tr:nth-child(2n){
 .sec-brand .brand-more-btn {
     margin-top: 3rem;
 }
-.sec-brand .brand-more-btn a{
+.sec-brand .brand-more-btn .btn-default{
     background: #f0885d;
+    border:0;
     box-shadow: 0px 3px 5px rgba(0,0,0 ,.2);
+}
+.sec-brand-intro  .swiper-pagination-bullet{
+    background : #fff;
+}
+.sec-brand-intro .swiper-pagination-bullet.swiper-pagination-bullet-active{
+   background: #f0885d;
 }
 
 
@@ -1246,7 +1357,8 @@ table.main-table tr:nth-child(2n){
     text-align: left;
     position: relative;
     padding: 3rem;
-    border-radius: 1rem;
+    height: auto;
+    /* border-radius: 1rem; */
 }
 .sec-brand-intro .brand-intro-item .thmb-img{
     height: 150px;
@@ -1288,6 +1400,23 @@ table.main-table tr:nth-child(2n){
 #brand-bellbird p strong{
     color: #2442b9 !important;
 }
+.sec-brand-intro .brand-product-Swiper .swiper-slide{
+    background: #fff;
+    margin: 1rem 0;
+    padding: 1rem;
+    text-align: center;
+}
+.sec-brand-intro .brand-product-Swiper .swiper-slide img{
+    width: 80%;
+}
+.sec-brand-intro .brand-product-Swiper .swiper-slide span{
+    display: none;
+}
+.sec-brand-intro .brand-product-Swiper .swiper-pagination{
+    height: 2rem;
+}
+
+
 
 
 
@@ -1429,6 +1558,41 @@ table.main-table tr:nth-child(2n){
        font-size: 1rem;
        line-height: 1.56;
     }
+    /* modal */
+    .modal .modal-dialog .modal-header{
+        padding: 1rem;
+    }
+    .modal .modal-dialog .modal-body{
+        padding : 1rem 1rem 2rem;
+    }
+    .modal .modal-dialog .launch-info-table .launch-info-row{
+        padding: 0.75rem 0;
+    }
+    .modal .modal-dialog h5{
+        font-size: 1.25rem
+    }
+    .modal .modal-dialog h6{
+        font-size: 1rem;
+    }
+    .modal .modal-dialog p, .modal .modal-dialog span,.modal .modal-dialog .launch-document ol li{
+        font-size: 0.9rem;
+    }
+    #productModal .product-item{
+        flex-wrap: wrap;
+        padding: 0rem 1rem;
+    }
+    #productModal .product-item .product_img_cover{
+        margin: auto;
+    }
+    #productModal .product-info{
+        padding-left: 0;
+        margin-top:1rem
+    }
+    
+    
+    
+
+
 
     /* ************************************************************* */
     /* index.html 메인화면                                             */
@@ -1811,7 +1975,7 @@ table.main-table tr:nth-child(2n){
     .sec-brand .brand-more-btn {
         margin-top: 2rem;
     }
-    .sec-brand .brand-more-btn a{
+    .sec-brand .brand-more-btn .btn-default{
         font-size: 1rem;
         height: 3rem;
         line-height: 3rem;
@@ -2073,6 +2237,7 @@ table.main-table tr:nth-child(2n){
     /* 2. sec-brand-slide : 브랜드 소개 슬라이드 (데이스포, 벨버드) */
     .sec-brand-intro .brand-intro-item {
         padding: 2rem;
+        margin-bottom: 1rem;
     }
     .sec-brand-intro .brand-intro-item .thmb-img{
         height: 100px;
@@ -2090,15 +2255,16 @@ table.main-table tr:nth-child(2n){
         top:2rem;
         right:2rem;
     }
-    /* .franchise-review .card-review .card-body h5{
-       line-height: 1.56;
+    .sec-brand-intro{
+        padding-bottom: 0;
     }
-    .franchise-review .card-review .card-body h6{
-        line-height: 1.56;
+    .sec-brand-intro .brand-product-Swiper{
+        margin-bottom: 5rem;
     }
-    .franchise-review .card-review .card-body p{
-        line-height: 1.56;
-    } */
+    .sec-brand-intro .brand-product-Swiper .swiper-slide{
+        margin:0;
+    }
+    
 
 }
 
