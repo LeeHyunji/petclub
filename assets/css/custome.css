@@ -45,6 +45,7 @@ b{
 .nav-toggle-btn{
     margin-left: 5rem !important;
 }
+
 /* responsive menu */
 .responsive-menu .rep-header{
     padding: 1rem 0;
@@ -55,11 +56,27 @@ b{
 .responsive-menu .close-menu{
     margin-right: 1rem;
 }
+.responsive-menu .search-box{
+    padding: 0.5rem 1rem;
+}
+.responsive-menu .search-box form input{
+    height: 3rem;
+    font-size : 1.25rem;
+}
+.responsive-menu .mobile-menu>li a{
+    font-size: 1.25rem;
+}
     /* menu-list */
 .responsive-menu .mobile-menu ul{
     padding: 1rem 2rem 2rem 2rem;
 }
-
+.responsive-menu .mobile-menu>li a:before{
+    font-size: 2rem !important;
+    font-weight: 400;
+}
+.mobile-menu>li.menu-item-has-children.active>a:before{
+    padding-top:1rem;
+}
 
 
 /* ************************************************************* */
@@ -659,6 +676,9 @@ table.main-table tr:nth-child(2n){
     background : #ececec;
 }
     /* .main-store-review  */
+.sec-main-review .main-review-swiper{
+    padding: 0 10%;
+}
 .sec-main-review .swiper-pagination,.sec-franchise-sales .franchise-review .swiper-pagination{
     margin-top: 2rem;
 }
@@ -686,7 +706,7 @@ table.main-table tr:nth-child(2n){
 }
 .card-review .card-head .store-name{
     color: #020202;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
 }
 .card-review h5{
     margin: 0.5rem 0;
@@ -698,17 +718,19 @@ table.main-table tr:nth-child(2n){
     overflow: hidden;
 }
 .card-review .card-head .review-star{
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     display: flex;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
 }
 .card-review .card-head .review-star p{
     margin-right: 0.5rem;
+    font-size: 1.125rem;
 }
 .star{
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
     display: inline-block;
     background-image: url("../image/review_star.png");
     background-size: cover;
@@ -747,7 +769,7 @@ table.main-table tr:nth-child(2n){
 
     text-overflow: ellipsis; 
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
