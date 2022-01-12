@@ -112,6 +112,10 @@ http://scripts.sil.org/OFL
 }
 .font_S{
 	font-family: 'SANJUGotgam' !important;
+	font-weight: 400 !important;
+}
+.font_BB{
+	font-family: 'BinggraeMelona-Bold' !important;
 }
 .font_B{
 	font-family: 'BinggraeMelona' !important;
