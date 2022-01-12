@@ -155,6 +155,10 @@ footer .bottom-footer{
     top: 50% !important;
     transform: translate(-50%,-50%) !important;
 }
+/* color */
+.color_ddd{
+    color: #ddd !important;
+}
 /* button */
 .btn-square{
     border-radius: 0;
@@ -1162,6 +1166,10 @@ table.main-table tr:nth-child(2n){
     margin: auto;
     margin-bottom: 5rem;
 }
+#sec-franchise .service-item .service-info p{
+    font-size: 1.25rem;
+    line-height: 1.56;
+}
 #service-item .service-info>h3 span{
     color: #ddd;
     font-family: ghanachoco;
@@ -1193,6 +1201,7 @@ table.main-table tr:nth-child(2n){
     font-size: 1.25rem;
     height: 3.5rem;
     line-height: 3.5rem;
+    box-shadow: unset !important;
 }
 
 
@@ -1222,7 +1231,10 @@ table.main-table tr:nth-child(2n){
     left: 3rem;
     font-weight: 400;
     font-size: 1.25rem;
-    color : #f0885d;
+    color : #f0885d !important;
+}
+.our-services-sec .our-services-content .service-card-mile .cat-up:before{
+    display: none;
 }
 .our-services-sec .our-services-content .service-card-mile>img{
     margin-left: auto;
@@ -1248,6 +1260,7 @@ table.main-table tr:nth-child(2n){
     font-size: 1.25rem;
     height: 3.5rem;
     line-height: 3.5rem;
+    box-shadow: unset !important;
 }
 
 
@@ -1356,6 +1369,12 @@ table.main-table tr:nth-child(2n){
 .franchise-review .swiper-button-prev, .franchise-review  .swiper-rtl .swiper-button-next{
     left: 0;
     color: #b7b6b4;
+}
+.sec-franchise-sales .btn-default{
+    font-size: 1.25rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    box-shadow: unset !important;
 }
 
 
