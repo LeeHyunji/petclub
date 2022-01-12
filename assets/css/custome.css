@@ -427,7 +427,8 @@ table.main-table tr:nth-child(2n){
     left: 3rem;
     bottom:3rem;
     font-size: 3rem;
-    font-weight: 00;
+    font-weight: 400;
+    text-shadow: 0 3px 10px rgb(0 0 0 / 30%);
     color: #fff;
 }
 .main-banner .swiper .swiper-slide h3 span{
