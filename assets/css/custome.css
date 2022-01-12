@@ -40,6 +40,7 @@ b{
 }
 .header-content-v8 nav ul li>ul li a{
     font-size: 1rem;
+    font-weight: 500;
 }
 .nav-toggle-btn{
     margin-left: 5rem !important;
@@ -839,6 +840,9 @@ table.main-table tr:nth-child(2n){
 .about-banner .featured-post-sec .featured-post{
     background-color: #fde1a4;
     margin-bottom: 0;
+    width: calc(100% - 2rem);
+    margin: auto;
+    max-width: 1400px;
 }
 .about-banner .featured-post-sec .featured-post .vector-img{
     height: 350px;
@@ -970,7 +974,7 @@ table.main-table tr:nth-child(2n){
     font-size: 1.5rem;
     color: #020202;
     padding : 3rem 0;
-    border-bottom: solid 2px #ececec;
+    border-bottom: solid 2px #ddd;
 }
 .sec-about-history .histroy-item img{
     width: 100%;
@@ -1406,8 +1410,7 @@ table.main-table tr:nth-child(2n){
     /* border-radius: 1rem; */
 }
 .sec-brand-intro .brand-intro-item .thmb-img{
-    height: 150px;
-    margin-bottom: 2rem;
+    height: 180px;
 }
 .sec-brand-intro .brand-intro-item .thmb-img img{
     height: 100%;
@@ -1439,10 +1442,10 @@ table.main-table tr:nth-child(2n){
     right:3rem;
     border-bottom: solid 1px #020202;
 }
-#brand-dayspaw p strong{
+#dayspaw p strong{
     color: #b76d2d !important;
 }
-#brand-bellbird p strong{
+#bellbird p strong{
     color: #2442b9 !important;
 }
 .sec-brand-intro .brand-product-Swiper .swiper-slide{
@@ -2288,7 +2291,6 @@ table.main-table tr:nth-child(2n){
     }
     .sec-brand-intro .brand-intro-item .thmb-img{
         height: 100px;
-        margin-bottom: 1rem;
     }
     .sec-brand-intro .brand-intro-item h3{
         font-size: 1.5rem;
