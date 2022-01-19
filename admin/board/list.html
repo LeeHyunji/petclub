@@ -1,0 +1,102 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/common/taglibs.jsp" %>
+<script type="text/javascript">
+FORM_ID='searchForm';
+</script>
+
+		<!-- contents -->
+		<section id="contents">
+			<h2>제품소식</h2>
+			<ul class="history">
+				<li>한국유나이티드제약</li>
+				<li>제품</li>
+				<li>제품소식</li>
+			</ul>
+
+			<!-- list_top_sort -->
+			<div class="list_top_sort">
+			<form name="searchForm" id="searchForm" method="get" onsubmit="">
+				<input type="hidden" id="page" name="page" />
+				<input type="hidden" id="listIdx" name="listIdx" />
+				<input type="hidden" id="tb" name="tb" value='<c:out value="${searchData.tb }" />' />
+				<select style="width:180px;">
+					<option value="">소식전체</option>
+					<option value="">성상변경</option>
+					<option value="">허가변경</option>
+				</select>
+				<div class="action">
+					<div class="list_search">
+						<fieldset>
+							<legend>리스트 검색 입력 폼</legend>
+							<select style="width:108px;">
+								<option value="">제목</option>
+								<option value="">내용</option>
+							</select>
+							<input type="text" name="keyword" id="keyword" value='<c:out value="${searchData.keyword }" />' style="width:294px">
+							<input type="submit" class="btn_list_search" value="검색">
+						</fieldset>
+					</div>
+				</div>
+			</form>
+			</div>
+			<!-- //list_top_sort -->
+
+
+			<!-- list_data -->
+			<div class="list_data">
+				<table class="list">
+					<caption>리스트 테이블</caption>
+					<colgroup>
+						<col style="width:90px">
+						<col style="width:auto">
+						<col style="width:100px">
+						<col style="width:140px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">제목</th>
+							<th scope="col">작성자</th>
+							<th scope="col">등록일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:choose>
+						<c:when test="${empty resultList }">
+							<!-- 게시글 없을 시 -->
+							<tr>
+								<td colspan="4">게시물이 없습니다.</td>
+							</tr>
+<!-- 							<tr> -->
+<!-- 								<td colspan="4">검색된 게시물이 없습니다.</td> -->
+<!-- 							</tr> -->
+							<!-- //게시글 없을 시 -->
+						</c:when>
+						
+						<c:otherwise>
+							<c:forEach var="list" items="${resultList }" varStatus="status">
+							<tr>
+								<td class=""><c:out value="${list.NO}" /></td>
+								<!-- 첨부파일 있을때 아이콘 이미지 추가 -->
+								<td class="text_l"><a href="javascript:fnAction(<c:out value="${list.LIST_IDX }" />, 'listIdx', 'write.do');" class="btn_link"><c:out value="${list.TITLE }" /><c:if test="${!empty list.FILE_NAME }"><img src="${adminImageRoot }/icon/icon_file.png" alt=""/></c:if></a></td>
+								<td class=""><c:out value="${list.WRITER }" /></td>
+								<td class=""><c:out value="${list.INS_DATE }" /></td>
+							</tr>
+							</c:forEach>
+						</c:otherwise>
+						</c:choose>
+					</tbody>
+				</table>
+			</div>
+			<!-- //list_data -->
+
+			<div class="paging_wrap">
+				<div class="paging">
+					<fos_app:pageTag pageVo="${pageVo}" afterFunc="goPage" />
+				</div>
+				<p class="btn_pos_right">
+					<a href="javascript:fnAction('', 'listIdx', 'write.do');" class="btn_big type_01">글쓰기</a>
+				</p>
+			</div>
+		</section>
+		<!-- //contents -->

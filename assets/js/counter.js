@@ -1,6 +1,9 @@
 if(jQuery("#counter").length) {
 
-jQuery(window).on("scroll", startCounter);
+
+jQuery(window).on("scroll", function(){
+});
+// jQuery(window).on("scroll", startCounter);
 function startCounter() {
     var hT = jQuery('#counter').offset().top,
         hH = jQuery('#counter').outerHeight(),

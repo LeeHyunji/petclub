@@ -24,7 +24,7 @@ b{
     margin-right: auto;
 }
 .header-content-v8 .logo-v8 img{
-        height: 3rem;
+    height: 3rem;
 }
 .header-content-v8 nav ul li{
     padding: 0 1.25rem;
@@ -32,6 +32,9 @@ b{
 .header-content-v8 nav ul li a{
     font-size: 1.25rem;
     font-weight: 600;
+}
+.header-content-v8 nav ul li a.active{
+    color: #f0885d;
 }
 .header-content-v8 nav ul li:hover>ul {
     opacity: 1;
@@ -66,7 +69,7 @@ b{
 .responsive-menu .mobile-menu>li a{
     font-size: 1.25rem;
 }
-    /* menu-list */
+/* menu-list */
 .responsive-menu .mobile-menu ul{
     padding: 1rem 2rem 2rem 2rem;
 }
@@ -94,7 +97,7 @@ footer .bottom-bar a{
     display: block;
     border-left: solid 2px rgba(255,255,255,.2);
 }
-footer .bottom-bar .row > .col:first{
+footer .bottom-bar .row > .col:first-child{
     border:0;
 }
 footer .bottom-bar .info-item{
@@ -364,7 +367,7 @@ table.main-table tr:nth-child(2n){
     padding: 1rem;
 }
 #productModal .product-item .product_img_cover{
-    width: 200px;
+    width: 250px;
 }
 #productModal .product-info{
     color: #020202;
@@ -380,6 +383,9 @@ table.main-table tr:nth-child(2n){
 /* index.html 메인화면                                             */
 /* ************************************************************* */
 /* 1. main-banner : 메인배너 */
+.main-banner{
+    padding-bottom: 3rem;
+}
 .main-banner:before{
     position:absolute;
     content:"";
@@ -387,7 +393,7 @@ table.main-table tr:nth-child(2n){
     width: 100%;
     height: 550px;
 }
-    /* main-banner slide */
+/* main-banner slide */
 .main-banner .swiper .swiper-slide{
     max-width: 70% ;
     background-color: #fff;
@@ -396,7 +402,7 @@ table.main-table tr:nth-child(2n){
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 500px;
+    height:600px;
     padding-top: 30%;
 }
 .main-banner .swiper .swiper-slide h2{
@@ -429,7 +435,7 @@ table.main-table tr:nth-child(2n){
     bottom:3rem;
     font-size: 3rem;
     font-weight: 400;
-    text-shadow: 0 3px 10px rgb(0 0 0 / 30%);
+    text-shadow: 0 3px 10px rgba(0,0,0,0.3);
     color: #fff;
 }
 .main-banner .swiper .swiper-slide h3 span{
@@ -438,8 +444,12 @@ table.main-table tr:nth-child(2n){
 .main-banner .swiper .swiper-slide h3 b{
     font-weight: 900;
 }
-    /* main-banner swiper.js nav버튼 */
-.main-banner .swiper-button-nav{ 
+.main-banner .swiper .swiper-slide:not(.swiper-slide-active) h3 span{
+    color: transparent;
+    text-shadow: 0 3px 10px rgba(0,0,0,0);
+}
+/* main-banner swiper.js nav버튼 */
+.main-banner .swiper-button-nav{
     width: 70%;
     margin: auto;
     position: absolute;
@@ -454,7 +464,7 @@ table.main-table tr:nth-child(2n){
     left: -60px;
     color: #b7b6b4;
 }
-    /* main-banner swiper.js pagination - bullets타입 */
+/* main-banner swiper.js pagination - bullets타입 */
 .swiper-pagination{
     position : unset;
     height: 5rem;
@@ -478,7 +488,7 @@ table.main-table tr:nth-child(2n){
     border: solid 2px #f0885d;
     background : #ececec;
 }
-    /* main-banner swiper.js pagination - custom타입 */
+/* main-banner swiper.js pagination - custom타입 */
 .main-banner .append-buttons{
     height: 5rem;
     display : flex;
@@ -497,10 +507,10 @@ table.main-table tr:nth-child(2n){
     font-size: 1.25rem;
     font-weight: 600;
     color: #696b6f;
-    margin: 0.75rem 1rem !important; 
+    margin: 0.75rem 1rem !important;
     background: transparent;
     border-radius: 0;
-    border-bottom: solid 1px #696b6f; 
+    border-bottom: solid 1px #696b6f;
     transition-duration: 0.2s;
 }
 .main-banner .append-buttons span.swiper-pagination-bullet-active{
@@ -508,7 +518,7 @@ table.main-table tr:nth-child(2n){
     background-color: #f0885d;
     border-radius: 2rem;
     border:0;
-    padding: 0.75rem 2rem; 
+    padding: 0.75rem 2rem;
     margin:0 1rem;
 }
 
@@ -549,14 +559,14 @@ table.main-table tr:nth-child(2n){
     background-position: center;
     background-repeat: no-repeat;
 }
-    /* card  */
+/* card  */
 .card-feature{
     background-color: #fff;
     border-radius: 2rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    word-break: keep-all; 
+    word-break: keep-all;
     word-wrap: break-word;
     margin-bottom: 2rem;
 }
@@ -580,6 +590,7 @@ table.main-table tr:nth-child(2n){
     white-space: pre-line;
     line-height: 1.56;
     font-size: 1.25rem;
+    font-weight: 600;
 }
 
 /* 3. sec-main-store: 펫클럽 가맹점 월매출 확인  */
@@ -601,7 +612,7 @@ table.main-table tr:nth-child(2n){
     background-position: center;
     background-repeat: no-repeat;
 }
-    /* .main-store-swiper  */
+/* .main-store-swiper  */
 .main-store-swiper{
     margin-top: 500px;
     padding: 3rem 0;
@@ -657,7 +668,7 @@ table.main-table tr:nth-child(2n){
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
     background: var(--swiper-pagination-color,#f0885d);
 }
-    /* store more-button */
+/* store more-button */
 .sec-main-store .more-button{
     text-align: center;
 }
@@ -680,11 +691,11 @@ table.main-table tr:nth-child(2n){
     transition: all .4s ease-in-out;
 }
 
- /* 4. sec-main-review: 펫클럽 실제점주 성공 창업 후기  */
+/* 4. sec-main-review: 펫클럽 실제점주 성공 창업 후기  */
 .sec-main-review {
     background : #ececec;
 }
-    /* .main-store-review  */
+/* .main-store-review  */
 .sec-main-review .main-review-swiper{
     padding: 0 10%;
 }
@@ -692,12 +703,12 @@ table.main-table tr:nth-child(2n){
     margin-top: 2rem;
 }
 .sec-main-review .swiper-pagination-bullet,.sec-franchise-sales .franchise-review .swiper-pagination-bullet{
-     background : #fff;
+    background : #fff;
 }
 .sec-main-review .swiper-pagination-bullet.swiper-pagination-bullet-active,.sec-franchise-sales .franchise-review .swiper-pagination-bullet.swiper-pagination-bullet-active{
     background: #f0885d;
 }
-    /* review card */
+/* review card */
 .card-review{
     border-radius: 2rem;
     overflow: hidden;
@@ -707,7 +718,7 @@ table.main-table tr:nth-child(2n){
     padding: 2rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 .card-review .card-head .card-head-title{
     max-width: calc(100% - 7rem);
@@ -722,9 +733,13 @@ table.main-table tr:nth-child(2n){
     color: #020202;
     font-weight: 700;
     font-size: 1.5rem;
-    text-overflow: ellipsis; 
-    white-space: nowrap; 
-    overflow: hidden;
+    word-break: keep-all;
+    /*text-overflow: ellipsis;*/
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+}
+.sec-main-review .card-review h5{
+    height: 73px;
 }
 .card-review .card-head .review-star{
     font-size: 1.125rem;
@@ -761,13 +776,17 @@ table.main-table tr:nth-child(2n){
 .card-review .card-body{
     background : #f0885d;
     padding: 2rem;
+    /*height: 310px;*/
 }
 .card-review .card-body h6{
     color : #fff;
     font-size: 1.5rem;
     font-weight: 700;
-    line-height: 1.56;
-    margin-bottom: 1.5rem;
+    line-height: 1.36;
+    margin-bottom: 1rem;
+}
+.sec-main-review .card-review .card-body h6{
+    height: 75px;
 }
 .card-review .card-body p{
     color : #fff;
@@ -776,13 +795,16 @@ table.main-table tr:nth-child(2n){
     word-break: keep-all;
     white-space: pre-line;
 
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-     /* review-card more-button */
+/*.sec-main-review .card-review .card-body{*/
+/*    min-height: 525px;*/
+/*}*/
+/* review-card more-button */
 .card-review .card-body .more-button{
     text-align: center;
     margin-top: 2rem;
@@ -844,6 +866,9 @@ table.main-table tr:nth-child(2n){
     margin: auto;
     max-width: 1400px;
 }
+.featured-post-sec .featured-post .featured-post-text{
+    max-width:100%;
+}
 .about-banner .featured-post-sec .featured-post .vector-img{
     height: 350px;
     overflow: hidden;
@@ -855,7 +880,7 @@ table.main-table tr:nth-child(2n){
 }
 /* 2. sec-about-mission: 대표 인사말 */
 .sec-about-mission.misson-section-v8 .mission-sec{
-    margin-top: 150px;
+    margin-top: 120px;
 }
 .sec-about-mission .mission-sec .vlm-text{
     padding-left:0;
@@ -903,13 +928,15 @@ table.main-table tr:nth-child(2n){
     color: #020202;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    line-height: 1.56;
 }
 .sec-about-mission .mission-sec .vlm-text p{
-    font-size : 1rem;
-    line-height: 1.56;
+    font-size : 1.2rem;
+    line-height: 1.7;
 }
 .sec-about-mission .mission-sec .crlce-misz{
     width: 100%;
+    margin-top: 70px;
 }
 .mission-sec .crlce-misz .crlce-list li.v1{
     width: 300px;
@@ -978,7 +1005,7 @@ table.main-table tr:nth-child(2n){
 }
 .sec-about-history .histroy-item img{
     width: 100%;
-    max-width: 150px;
+    max-width: 100px;
 }
 .sec-about-history .histroy-item ul{
     padding-left: 3rem;
@@ -986,7 +1013,7 @@ table.main-table tr:nth-child(2n){
 }
 .sec-about-history .histroy-item ul > h6{
     color: #b7b6b4;
-    font-size: 1.25rem;   
+    font-size: 1.25rem;
 }
 .sec-about-history .histroy-item ul li{
     color: #020202;
@@ -995,7 +1022,7 @@ table.main-table tr:nth-child(2n){
 }
 .sec-about-history .histroy-item ul li::before {
     content: "ㆍ";
-  }
+}
 
 /* 5. sec-brand : 브랜드 소개 섹션 */
 .sec-brand .fzt-row{
@@ -1018,6 +1045,7 @@ table.main-table tr:nth-child(2n){
     line-height: 1.56;
     font-weight: 400;
     margin-bottom: 1.5rem;
+    word-break: keep-all;
 }
 .sec-brand .brand-icon{
     display: block;
@@ -1039,7 +1067,7 @@ table.main-table tr:nth-child(2n){
     background : #fff;
 }
 .sec-brand-intro .swiper-pagination-bullet.swiper-pagination-bullet-active{
-   background: #f0885d;
+    background: #f0885d;
 }
 
 
@@ -1171,6 +1199,7 @@ table.main-table tr:nth-child(2n){
 #sec-franchise .service-item{
     margin: auto;
     margin-bottom: 5rem;
+    max-width: 600px;
 }
 #sec-franchise .service-item .service-info p{
     font-size: 1.25rem;
@@ -1215,12 +1244,15 @@ table.main-table tr:nth-child(2n){
 /* franchise-03.html 가맹정보 비용및절차                              */
 /* ************************************************************* */
 .sec-franchise-process .service_v1_content > .sec-header-2,.sec-franchise-sales .service_v1_content > .sec-header-2{
-    padding-bottom: 7rem; 
+    padding-bottom: 7rem;
 }
 /* 1. process slider */
 .sec-franchise-process .our-services-sec{
     background-color: #fef2d9;
     padding: 8rem 0;
+}
+.sec-franchise-process .our-services-sec .our-services-content .service-card-mile>h2{
+    font-size: 2rem;
 }
 .sec-franchise-process .our-services-sec .our-services-content .svs-slider .slick-next,.sec-franchise-process .our-services-sec .our-services-content .svs-slider .slick-prev{
     top: -2rem;
@@ -1229,7 +1261,7 @@ table.main-table tr:nth-child(2n){
     color: #f0885d;
 }
 .sec-franchise-process .our-services-sec .our-services-content .service-card-mile{
-    padding: 3rem;
+    padding: 2rem;
     margin-bottom: 0rem;
 }
 .our-services-sec .our-services-content .service-card-mile .cat-up{
@@ -1315,7 +1347,7 @@ table.main-table tr:nth-child(2n){
     align-items: flex-start;
     justify-content: flex-start;
     background : #fff;
-    
+
 }
 .franchise-review .card-review .card-head .card-head-title{
     margin-left: 1rem;
@@ -1360,7 +1392,7 @@ table.main-table tr:nth-child(2n){
     padding-left: 5rem;
     padding-right: 5rem;
 }
-.franchise-review .swiper-button-nav{ 
+.franchise-review .swiper-button-nav{
     width: 100%;
     margin: auto;
     position: absolute;
@@ -1443,6 +1475,10 @@ table.main-table tr:nth-child(2n){
     right:3rem;
     border-bottom: solid 1px #020202;
 }
+.sec-brand-intro .brand-intro-item a.brand-page-link:hover{
+    color: #f0885d;
+    border-bottom: solid 1px #f0885d;
+}
 #dayspaw p strong{
     color: #b76d2d !important;
 }
@@ -1451,10 +1487,14 @@ table.main-table tr:nth-child(2n){
 }
 .sec-brand-intro .brand-product-Swiper .swiper-slide{
     background: #fff;
-    margin: 1rem 0;
+    margin: 30px 0 15px;
     padding: 1rem;
     text-align: center;
     cursor: pointer;
+}
+.sec-brand-intro .brand-product-Swiper .swiper-slide:hover{
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    transition: 1s;
 }
 .sec-brand-intro .brand-product-Swiper .swiper-slide img{
     width: 100%;
@@ -1476,7 +1516,7 @@ table.main-table tr:nth-child(2n){
 /* mobile 화면 */
 @media only screen and (max-width:991px) {
     html,body {
-        font-size: 12px; 
+        font-size: 12px;
     }
 
     /* ************************************************************* */
@@ -1484,11 +1524,14 @@ table.main-table tr:nth-child(2n){
     /* ************************************************************* */
     /* 1. 하단 고정바 bottom-bar */
     footer .bottom-bar{
-     border-radius: 5rem;
-     width: calc(100% - 1rem);
-     margin : 1rem 0.5rem;
-     box-shadow: 0px 3px 5px rgba(0,0,0 ,.2);
-     padding: 0.75rem 1.5rem;
+        border-radius: 5rem;
+        width: calc(100% - 1rem);
+        margin : 1rem 0.5rem;
+        box-shadow: 0px 3px 5px rgba(0,0,0 ,.2);
+        padding: 0.75rem 1.5rem;
+    }
+    footer .bottom-bar .row{
+        align-items: center;
     }
     footer .bottom-bar a{
         border:0;
@@ -1606,8 +1649,8 @@ table.main-table tr:nth-child(2n){
         margin-bottom: 2rem;
     }
     .table-info p{
-       font-size: 1rem;
-       line-height: 1.56;
+        font-size: 1rem;
+        line-height: 1.56;
     }
     /* modal */
     .modal .modal-dialog .modal-header{
@@ -1639,9 +1682,9 @@ table.main-table tr:nth-child(2n){
         padding-left: 0;
         margin-top:1rem
     }
-    
-    
-    
+
+
+
 
 
 
@@ -1649,10 +1692,13 @@ table.main-table tr:nth-child(2n){
     /* index.html 메인화면                                             */
     /* ************************************************************* */
     /* 1. main-banner : 메인배너 */
+    .main-banner{
+        padding-bottom: 0;
+    }
     .main-banner:before{
         display: none;
     }
-        /* main-banner slide */
+    /* main-banner slide */
     .main-banner .swiper .swiper-wrapper{
         margin: 0px 1rem;
     }
@@ -1661,7 +1707,8 @@ table.main-table tr:nth-child(2n){
         background-color: #fff;
         border-radius: 10px;
         background-position: 60%;
-        height: 500px;
+        height: 60vh;
+        max-height: 450px;
         padding-top: 30%;
     }
     .main-banner .swiper .swiper-slide h2{
@@ -1685,12 +1732,12 @@ table.main-table tr:nth-child(2n){
     .main-banner .swiper .swiper-slide h3 span{
         font-size: 3rem;
     }
-        /* main-banner swiper.js pagination - bullets타입 */
+    /* main-banner swiper.js pagination - bullets타입 */
     .swiper-pagination{
         margin :0;
         height: 3rem;
     }
-        /* main-banner swiper.js pagination - custom타입 */
+    /* main-banner swiper.js pagination - custom타입 */
     .main-banner .append-buttons{
         justify-content: flex-start;
         padding : 0 0.5rem;
@@ -1705,7 +1752,7 @@ table.main-table tr:nth-child(2n){
         padding: 0.5rem 1.25rem;
         margin: 0.5rem;
     }
-        /* main-banner swiper.js nav버튼 */
+    /* main-banner swiper.js nav버튼 */
     .main-banner .swiper-button-nav{
         display: none;
     }
@@ -1759,7 +1806,7 @@ table.main-table tr:nth-child(2n){
     .sec-main.sec-main-feature .sec-header h2::after{
         height: 3rem;
     }
-        /* card  */
+    /* card  */
     .card-feature{
         margin-bottom: 1rem;
         border-radius: 1rem;
@@ -1789,7 +1836,7 @@ table.main-table tr:nth-child(2n){
         width: 100%;
         padding: 0;
     }
-        /* .main-store-swiper  */
+    /* .main-store-swiper  */
     .main-store-swiper{
         margin-top: 300px;
     }
@@ -1823,7 +1870,7 @@ table.main-table tr:nth-child(2n){
     .main-store-swiper .swiper-slide p.store-price{
         font-size: 1.5rem;
     }
-        /* .more-button */
+    /* .more-button */
     .sec-main-store .btn-store-more{
         font-size: 0.9rem;
         padding: 0.5rem 1.5rem;
@@ -1831,7 +1878,7 @@ table.main-table tr:nth-child(2n){
     }
 
     /* 4. sec-main-review: 펫클럽 실제점주 성공 창업 후기  */
-        /* .main-store-review  */
+    /* .main-store-review  */
     .sec-main-review .swiper .swiper-wrapper {
         margin: 0px 1rem;
     }
@@ -1839,7 +1886,7 @@ table.main-table tr:nth-child(2n){
         max-width: 85%;
         border-radius: 10px;
     }
-         /* review card */
+    /* review card */
     .card-review .card-head .card-head-title {
         max-width: calc(100% - 6rem);
     }
@@ -1859,16 +1906,23 @@ table.main-table tr:nth-child(2n){
     }
     .card-review .card-body h6{
         font-size: 1.25rem;
+        height: 3rem;
+    }
+    .sec-main-review .card-review .card-body h6{
+        height: 3rem;
     }
     .card-review .card-body p{
         font-size: 1rem;
     }
+    /*.sec-main-review .card-review .card-body p{*/
+    /*    height: 220px;*/
+    /*}*/
 
     /* 4. sec-main-hotkeyword: 예비 점주가 궁금한 핫 키워드 바로가기   */
     .sec-main-hotkeywords{
-        height: 500px;
+        height: 550px;
         background-size: cover;
-        background-position: left;
+        background-position: 55%;
     }
     .sec-main-hotkeywords .sec-header h2{
         text-align: center;
@@ -1881,6 +1935,7 @@ table.main-table tr:nth-child(2n){
         padding-right: 0rem;
         margin-bottom: 0.5rem;
         width: 100%;
+        height: 2.5rem;
     }
     .sec-main-hotkeywords .keywords-list > li > a{
         border : solid 2px #f0885d;
@@ -1893,7 +1948,7 @@ table.main-table tr:nth-child(2n){
         background: transparent;
 
     }
-    
+
 
 
 
@@ -1927,6 +1982,7 @@ table.main-table tr:nth-child(2n){
     }
     .sec-about-mission .mission-sec .crlce-misz{
         height: auto;
+        margin-top:0;
     }
     .misson-section-v8 .mission-sec .crlce-misz:after{
         display: none;
@@ -1998,7 +2054,7 @@ table.main-table tr:nth-child(2n){
         padding-left:0;
     }
     .sec-about-history .histroy-item ul > h6{
-        font-size: 1rem;   
+        font-size: 1rem;
     }
     .sec-about-history .histroy-item ul li{
         font-size: 0.9rem;
@@ -2013,6 +2069,7 @@ table.main-table tr:nth-child(2n){
     }
     .sec-brand .our-fzt>h3{
         font-size: 1rem;
+        word-break: keep-all;
         margin-bottom: 0.5rem;
     }
     .sec-brand .brand-icon{
@@ -2034,10 +2091,10 @@ table.main-table tr:nth-child(2n){
         background: #f0885d;
         box-shadow: 0px 3px 5px rgba(0,0,0 ,.2);
     }
-    
 
 
-   
+
+
     /* ************************************************************* */
     /* board.html 뉴스&이벤트                                             */
     /* ************************************************************* */
@@ -2104,7 +2161,7 @@ table.main-table tr:nth-child(2n){
         line-height: 1.56;
     }
     .sec-board-list .blog-posts-layout2+.mile_pagination .pagination{
-        text-align: center !important; 
+        text-align: center !important;
     }
 
     /* ************************************************************* */
@@ -2154,6 +2211,7 @@ table.main-table tr:nth-child(2n){
     }
     .fzt-tab .our-fzt h3{
         font-size: 1.5rem;
+        word-break: keep-all;
     }
     .fzt-tab .our-fzt p{
         font-size: 0.9rem;
@@ -2164,10 +2222,10 @@ table.main-table tr:nth-child(2n){
     }
     /* service-item */
     #sec-franchise .sec-header-2{
-        margin-bottom: 3rem;
+        margin: 3rem 0;
     }
     #sec-franchise .services_items > div:last-child .service-item{
-        margin-bottom: 0 !important; 
+        margin-bottom: 0 !important;
     }
     #sec-franchise .service-item{
         margin-bottom: 5rem !important;
@@ -2201,7 +2259,7 @@ table.main-table tr:nth-child(2n){
         padding-top: 3rem;
         padding-bottom: 5rem;
     }
-        /* table  */
+    /* table  */
     .sec-franchise-bm table th:first-child{
         width: 25%;
         min-width: 180px;
@@ -2217,7 +2275,7 @@ table.main-table tr:nth-child(2n){
         background: unset
     }
     .sec-franchise-process .service_v1_content > .sec-header-2,.sec-franchise-sales .service_v1_content > .sec-header-2{
-        padding-bottom: 0rem; 
+        padding-bottom: 0rem;
     }
     .sec-franchise-process .our-services-sec{
         padding: 5rem 0;
@@ -2235,6 +2293,9 @@ table.main-table tr:nth-child(2n){
     }
     .sec-franchise-process .our-services-sec .our-services-content .svs-slider .slick-slide{
         padding: 0 0.5rem ;
+    }
+    .sec-franchise-process .our-services-sec .our-services-content .svs-slider .slick-list{
+        overflow: hidden;
     }
     .sec-franchise-process .our-services-sec .our-services-content .service-card-mile{
         padding: 2rem;
@@ -2269,6 +2330,9 @@ table.main-table tr:nth-child(2n){
     .franchise-review .card-review{
         padding: 1rem;
     }
+    .franchise-review .card-review .card-head .review-star{
+        margin-top:0;
+    }
     /* swiper.js nav버튼 */
     .franchise-review .swiper{
         margin-left: 0;
@@ -2276,17 +2340,17 @@ table.main-table tr:nth-child(2n){
         padding-left: 0;
         padding-right: 0;
     }
-    .franchise-review .swiper-button-nav{ 
+    .franchise-review .swiper-button-nav{
         display: none;
     }
-   
+
 
 
     /* ************************************************************* */
     /* brand.html 브랜드                                           */
     /* ************************************************************* */
     /* 1. brand-banner : brand.html 배너 */
-    
+
     /* 2. sec-brand-slide : 브랜드 소개 슬라이드 (데이스포, 벨버드) */
     .sec-brand-intro .brand-intro-item {
         padding: 2rem;
@@ -2316,13 +2380,18 @@ table.main-table tr:nth-child(2n){
     .sec-brand-intro .brand-product-Swiper .swiper-slide{
         margin:0;
     }
-    
+
 
 }
 
 
 /* mobile 화면 */
 @media only screen and (max-width:764px) {
+
+
+    .sec-main-review .main-review-swiper{
+        padding: 0;
+    }
     /* ************************************************************* */
     /* about.html 브랜드소개                                            */
     /* ************************************************************* */
@@ -2346,7 +2415,7 @@ table.main-table tr:nth-child(2n){
         font-size: 4rem;
     }
 
-     
+
 
 
 
@@ -2393,7 +2462,7 @@ table.main-table tr:nth-child(2n){
         text-align: left;
         margin-bottom: 1rem;
     }
-    
+
 
 
 }
@@ -2402,11 +2471,11 @@ table.main-table tr:nth-child(2n){
 
 @media only screen and (max-width:1200px) {
     html,body {
-        font-size: 14px; 
+        font-size: 14px;
     }
     .container-fluid{
         width: 100%;
         min-width: 100%;
     }
-    
+
 }

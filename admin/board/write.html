@@ -1,0 +1,89 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/common/taglibs.jsp" %>
+<script type="text/javascript">
+	$(document).ready(function() {
+		// 스마트에디터 적용
+		var editor = $("#content").smartEditor();
+		
+		// 에디터 내용 수정사항 적용 (validation 체크 시 우선 적용할것.)
+		//editor.update();
+		
+	});
+</script>
+		<!-- contents -->
+		<section id="contents">
+			<h2>제품소식</h2>
+			<ul class="history">
+				<li>한국유나이티드제약</li>
+				<li>제품</li>
+				<li>제품소식</li>
+			</ul>
+
+			<!-- write_list -->
+			<div class="write_list">
+				<fieldset>
+					<legend>게시판 등록 입력 폼</legend>
+					<table class="write">
+						<caption>게시판 등록 테이블</caption>
+						<colgroup>
+							<col style="width:160px">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th><em class="need">*</em>카테고리</th>
+								<td>
+									<select  style="width:175px">
+										<option value="">전체</option>
+										<option value="">성상변경</option>
+										<option value="">허가변경</option>
+									</select>
+								</td>
+							</tr>		
+							<tr>
+								<th><em class="need">*</em>제목</th>
+								<td><input type="text" name="title" id="title" title="제목 입력" style="width:583px" value="<c:out value="${resultData.TITLE }" />" /></td>
+							</tr>
+							<tr>
+								<th><em class="need">*</em>등록일</th>
+								<td><div class="d_wrap" style="width:150px"><input type="text" name="" id="" class="datepicker" title="시작 달력 입력"></div></td>
+							</tr>						
+							<tr>
+								<th><em class="need">*</em>내용</th>
+								<td>
+<!-- 									<div style="height:330px;font-size:48px;color:red;line-height:330px;text-align:center;background:#b2b2b2;"> -->
+										<textarea id="content" name="content"><c:out value="${resultData.CONTENT }" escapeXml="false" /></textarea>
+<!-- 									</div> -->
+								</td>
+							</tr>
+							<tr>
+								<th>Down 파일</th>
+								<td>
+									<div class="file_cell small" style="width:370px;">
+										<input type="file" name="mulityFile" title="파일 업로드" onchange="fileChange(this);">
+										<input type="text" name="mulityFileTxt" readonly="" value="" title="업로드된 파일 경로">
+										<button class="btn_small type_03 btn_file"><span>파일찾기</span></button>
+									</div>
+									<span class="file_add_info">최대 20MB까지 가능</span>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</fieldset>
+			</div>
+			<!-- //write_list -->
+
+			
+			<div class="btn_page text_c">
+				<!-- 최초 등록시 -->
+				<a href="#" class="btn_big type_01">등록</a>
+				<a href="#" class="btn_big type_02">취소</a>
+				<!-- 수정 등록시 
+				<a href="#" class="btn_big type_02">수정</a>
+				<a href="#" class="btn_big type_02">삭제</a>
+				<a href="#" class="btn_big type_01">목록</a>
+				-->
+			</div>
+		</section>
+		<!-- //contents -->

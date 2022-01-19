@@ -1,0 +1,150 @@
+@charset "utf-8";
+/*******************************************************
+
+	100	:	Thin
+	200	:	Extra Light (Ultra Light)
+	300	:	Light
+	350	:	DemiLight
+	400	:	Regular
+	500	:	Medium
+	600	:	Semi Bold (Demi Bold)
+	700	:	Bold
+	800	:	Extra Bold (Ultra Bold)
+	900	:	Black (Heavy)	
+
+*******************************************************/
+
+/* Noto Sans(300 , 350 , 400 , 500 , 700) */
+@font-face {
+    font-family: 'NotoSansKR';
+	font-style: normal;
+	font-weight: 300;
+	src: url('../font/NotoSansKR-Light.eot');
+	src: url('../font/NotoSansKR-Light.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NotoSansKR-Light.woff') format('woff'),
+		 url('../font/NotoSansKR-Light.otf') format('opentype');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+	font-style: normal;
+	font-weight: 350;
+	src: url('../font/NotoSansKR-Demilight.eot');
+	src: url('../font/NotoSansKR-Demilight.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NotoSansKR-Demilight.woff') format('woff'),
+		 url('../font/NotoSansKR-Demilight.otf') format('opentype');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/NotoSansKR-Regular.eot');
+	src: url('../font/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NotoSansKR-Regular.woff') format('woff'),
+		 url('../font/NotoSansKR-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../font/NotoSansKR-Medium.eot');
+	src: url('../font/NotoSansKR-Medium.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NotoSansKR-Medium.woff') format('woff'),
+		 url('../font/NotoSansKR-Medium.otf') format('opentype');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../font/NotoSansKR-Bold.eot');
+	src: url('../font/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../font/NotoSansKR-Bold.woff') format('woff'),
+		 url('../font/NotoSansKR-Bold.otf') format('opentype');
+}
+
+/* Nanum Square(300,400,700,900) */
+@font-face {
+    font-family:'Nanum Square';
+    font-weight:300;
+    font-style: normal;
+    src: url('../font/NanumSquareL.eot');
+    src: url('../font/NanumSquareL.eot?#iefix') format('embedded-opentype'),
+         url('../font/NanumSquareL.woff') format('woff'),
+         url('../font/NanumSquareL.ttf') format('truetype')
+}
+
+@font-face {
+    font-family:'Nanum Square';
+    font-weight:400;
+    font-style: normal;
+    src: url('../font/NanumSquareR.eot');
+    src: url('../font/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+         url('../font/NanumSquareR.woff') format('woff'),
+         url('../font/NanumSquareR.ttf') format('truetype')
+}
+
+@font-face {
+    font-family:'Nanum Square';
+    font-weight:700;
+    font-style: normal;
+    src: url('../font/NanumSquareB.eot');
+    src: url('../font/NanumSquareB.eot?#iefix') format('embedded-opentype'),
+         url('../font/NanumSquareB.woff') format('woff'),
+         url('../font/NanumSquareB.ttf') format('truetype')
+} 
+
+@font-face {
+    font-family:'Nanum Square';
+    font-weight:900;
+    font-style: normal;
+    src: url('../font/NanumSquareEB.eot');
+    src: url('../font/NanumSquareEB.eot?#iefix') format('embedded-opentype'),
+         url('../font/NanumSquareEB.woff') format('woff'),
+         url('../font/NanumSquareEB.ttf') format('truetype')
+} 
+
+
+/* Barlow(100,300,400,500,700) */
+@font-face {
+   font-family: 'Barlow';
+   font-style: normal;
+   font-weight: 100;
+   src: url('../font/Barlow-Thin.woff2') format('woff2'),
+        url('../font/Barlow-Thin.woff') format('woff'),
+        url('../font/Barlow-Thin.otf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Barlow';
+   font-style: normal;
+   font-weight: 300;
+   src: url('../font/Barlow-Light.woff2') format('woff2'),
+        url('../font/Barlow-Light.woff') format('woff'),
+        url('../font/Barlow-Light.otf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Barlow';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../font/Barlow-Regular.woff2') format('woff2'),
+        url('../font/Barlow-Regular.woff') format('woff'),
+        url('../font/Barlow-Regular.otf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Barlow';
+   font-style: normal;
+   font-weight: 500;
+   src: url('../font/Barlow-SemiBold.woff2') format('woff2'),
+        url('../font/Barlow-SemiBold.woff') format('woff'),
+        url('../font/Barlow-SemiBold.otf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Barlow';
+   font-style: normal;
+   font-weight: 700;
+   src: url('../font/Barlow-Bold.woff2') format('woff2'),
+        url('../font/Barlow-Bold.woff') format('woff'),
+        url('../font/Barlow-Bold.otf') format('truetype');
+}

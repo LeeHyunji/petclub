@@ -1,0 +1,312 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/common/taglibs.jsp" %>
+		<script type="text/javascript">
+			var bmData = [];
+			// 상세
+			function getDetail(idx){
+				$("#idx").val(bmData[idx].idx);
+				$("#name").val(bmData[idx].name);
+				$("#enname").val(bmData[idx].enname);
+				$("#board_type").val(bmData[idx].board_type);
+				$("#read_level").val(bmData[idx].read_level);
+				$("#write_level").val(bmData[idx].write_level);
+				$("#reply_level").val(bmData[idx].reply_level);
+				$("#app_id").val(bmData[idx].app_id);
+				$("#btnDelete").fadeIn(0);
+				/*
+				author		이상재
+				since			2019-04-18
+				comment	데이터 클릭 시 [신규등록] 버튼 보임 처리
+				*/
+				$("#btnReset").fadeIn(0);
+			}
+			// 목록 setting
+			function setList(jsonDoc){
+				if(FnResult(jsonDoc)){
+					// 초기화
+					$("#list > tbody > tr").remove();
+					bmData = [];
+					
+					// 목록
+					var rows = jsonDoc.resultList, tr="";
+					if(rows.length==0){
+						var viewMsg = "게시물이 없습니다.";
+						tr += '<tr>'
+							+ '<td colspan="4">' + viewMsg + '</td>'
+							+ '</tr>';
+						$("#list > tbody").append(tr);
+					}else{
+						$.each(rows, function(idx, row){
+							tr = '<tr>';
+							tr += '<td class="">'+(idx+1)+'</td>';
+							tr += '<td class="text_l"><a href="javascript:getDetail('+idx+')" class="btn_link">'+row.NAME+'</a></td>';
+							tr += '<td class="">'+row.INS_NAME+'</td>';
+							tr += '<td class="">'+row.INS_DATE+'</td>';
+							tr += '</tr>';
+								
+							$("#list > tbody").append(tr);
+							bmData.push({idx:row.IDX
+										,name:row.NAME
+										,enname:row.ENNAME
+										,board_type:row.BOARD_TYPE
+										,read_level:row.READ_LEVEL
+										,write_level:row.WRITE_LEVEL
+										,reply_level:row.REPLY_LEVEL
+										,app_id:row.APP_ID});
+						});
+					}
+				}
+			}
+				
+			
+			//prepare the form when the DOM is ready
+			$(document).ready(function(){
+				$("#searchFrm").ajaxForm({
+					dataType:"json",
+					success : setList,
+					error : function(error) {
+						FnResponseErr(error);
+					}
+				});
+				
+				$("#saveFrm").ajaxForm({
+					dataType:"json",
+					success : function(jsonDoc){
+						// $("#saveFrm").resetForm();
+						if(FnResult(jsonDoc)){
+							// 목록 다시 띄우기
+							$("#btnSearch").trigger("click");
+							// 입력폼 reset
+							$("#btnReset").trigger("click");
+						}
+					},
+					error : function(error) {
+						FnResponseErr(error);
+					}
+				})
+				
+				// 검색
+				$("#btnSearch").on("click", function(){
+					$("#searchFrm").submit();
+				});
+				
+				// 신규등록
+				$("#btnReset").on("click", function(){
+					$("#saveFrm").resetForm();
+					$("#idx").val(-1);
+					$("#btnDelete").fadeOut(0);
+					/*
+					author		이상재
+					since			2019-04-18
+					comment	신규등록 버튼 클릭 시 [신규등록] 버튼 숨김 처리
+					*/
+					$("#btnReset").fadeOut(0);
+				});
+				
+				// 저장
+				$("#btnSave").on("click", function(){
+					if(!validate(document.saveFrm))
+						return false;
+					if(!confirm("저장 하시겠습니까?"))
+						return false;
+					$("#saveFrm").submit();
+				});
+				
+				// 삭제
+				$("#btnDelete").on("click", function(){
+					if(!confirm("삭제 하시겠습니까?"))
+						return false;
+					$.post("${pageContext.request.contextPath }/admin/boardMaster/delete/ajax.do",
+							{idx:$("#idx").val()},
+							function(jsonDoc){
+								if(FnResult(jsonDoc)){
+									// 목록 다시 조회
+									$("#btnSearch").trigger("click");
+									// 입력폼 reset
+									$("#btnReset").trigger("click");
+								}
+							},
+						"json")
+					.fail(function(request,status,error){
+						  FnResponseErr(request);
+					});
+				});
+				
+				$(document).on("click","a[id^='btn'], button", function(e){
+					// form submit 막음
+					e.preventDefault();
+				});
+				
+				/*///////////////////////////////// document Ready Start /////////////////////////////////*/
+				// 입력폼 reset
+				$("#btnReset").trigger("click");
+				// 목록 조회
+				$("#btnSearch").trigger("click");
+				/*
+					author		이상재
+					since			2019-04-18
+					comment	페이지 로딩 시 [신규등록] 버튼 숨김 처리
+				*/
+				$("#btnReset").fadeOut(0);
+				/*///////////////////////////////// document Ready End /////////////////////////////////*/
+			});
+		</script>
+
+		<!-- contents -->
+		<section id="contents">
+			<h2>게시판관리</h2>
+			<ul class="history">
+				<li>한국유나이티드제약</li>
+				<li>회원관리</li>
+				<li>게시판관리</li>
+			</ul>
+
+			<!-- list_top_sort -->
+			<form id="searchFrm" name="searchFrm" action="${pageContext.request.contextPath }/admin/boardMaster/selectList/ajax.do" method="post">
+			<div class="list_top_sort">
+				<div class="action">
+					<div class="list_search">
+						<fieldset>
+							<legend>리스트 검색 입력 폼</legend>
+							<input type="text" name="keyword" id="keyword" style="width:294px" placeholder="게시판명을 입력하세요.">
+							<button id="btnSearch" class="btn_small type_04 btn_input_search">검색</button>  	
+						</fieldset>
+					</div>
+				</div>
+			</div>
+			</form>
+			<!-- //list_top_sort -->
+
+			<!-- write_list -->
+			<div class="write_list">
+				<form id="saveFrm" name="saveFrm" action="${pageContext.request.contextPath }/admin/boardMaster/save/ajax.do" method="post">
+					<input type="hidden" name="idx" id="idx" value="-1" />
+				<fieldset>
+					<legend>게시판관리 등록 입력 폼</legend>
+					<table class="write">
+						<caption>게시판관리 등록 테이블</caption>
+						<colgroup>
+							<col style="width:160px">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>게시판명</th>
+								<td>
+									<ul class="grid_item">
+										<li class="row_2">
+											<div class="default_input">
+												<div class="input_data"><input type="text" name="name" id="name" placeholder="한글 게시판명을 입력하세요!" REQUIRE hname="한글게시판명"></div>
+											</div>
+										</li>
+										<li class="row_2">
+											<div class="default_input">
+												<div class="input_data"><input type="text" name="enname" id="enname" placeholder="영문 대문자로 게시판명을 입력하세요!"></div>
+											</div>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>게시판타입</th>
+								<td>
+									<select name="board_type" id="board_type" style="width:175px">
+										<option value="LIST" selected="selected">리스트</option>
+										<option value="GALLERY">갤러리</option>
+										<option value="GALLERYLIST">갤러리리스트</option>
+										<option value="VIDEO">영상</option>
+										<option value="FAQ">FAQ</option>
+										<option value="PRODUCT">제품</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>읽기권한</th>
+								<td>
+									<select id="read_level" name="read_level" style="width:175px">
+										<option value="9" selected="selected">전체</option>
+										<option value="1">관리자</option>
+										<option value="2">회원</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>쓰기권한</th>
+								<td>
+									<select id="write_level" name="write_level" style="width:175px">
+										<option value="9" selected="selected">전체</option>
+										<option value="1">관리자</option>
+										<option value="2">회원</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>답글권한</th>
+								<td>
+									<select id="reply_level" name="reply_level" style="width:175px">
+										<option value="9" selected="selected">전체</option>
+										<option value="1">관리자</option>
+										<option value="2">회원</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>권한자 지정</th>
+								<td>
+									<div class="input_btns">
+										<input type="text" name="app_id" id="app_id" style="width:350px;"><! placeholder="아이디 또는 이름을 2글자 이상 입력하세요!"><!-- <input type="submit" value="검색" class="btn_small type_03"><button class="btn_small type_03"><span>삭제</span></button> -->
+									</div>
+
+									<!-- <div class="row_check" style="margin-top:10px;">
+										<ul>
+											<li class="cell"><p class="check"><input type="checkbox" name="check01" id="check0101"><label for="check0101"><span></span>홍길동(abcde)</label></p></li>
+											<li class="cell"><p class="check"><input type="checkbox" name="check01" id="check0102"><label for="check0102"><span></span>홍길동2 (abcde2)</label></p></li>
+										</ul>						
+									</div> -->
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				</form>
+			</div>
+			<!-- //write_list -->
+
+			
+			<div class="btn_page text_c">
+				<a href="#" id="btnReset" class="btn_big type_02">신규등록</a>
+				<a href="#" id="btnSave" class="btn_big type_01">저장</a>
+				<a href="#" id="btnDelete" class="btn_big type_01">삭제</a>
+			</div>
+
+			<div class="list_data default_cell">
+				<table class="list" id="list">
+					<caption>리스트 테이블</caption>
+					<colgroup>
+						<col style="width:90px">
+						<col style="width:auto">
+						<col style="width:100px">
+						<col style="width:140px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">게시판명</th>
+							<th scope="col">권한자</th>
+							<th scope="col">등록일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class=""></td>
+							<td class="text_l"><a href="#" class="btn_link"></a></td>
+							<td class=""></td>
+							<td class=""></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //list_data -->
+		</section>
+		<!-- //contents -->

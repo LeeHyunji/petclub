@@ -1,0 +1,98 @@
+div.mapLayer {
+	display: block;
+	width: 150px;
+	
+}
+
+/* pop */
+@media(min-width: 768px) {
+	div.mapLayer {
+		width: 380px;
+	}
+}
+
+div.mapLayer div.header {
+	border-bottom: 1px solid #f4f4f4;
+	padding: 10px;
+}
+div.mapLayer div.header h3 {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+	line-height: 1;
+}
+div.mapLayer div.header div.box-tools {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+div.mapLayer div.body {
+	padding: 10px 20px;
+	text-align: left;
+	clear: both;
+}
+
+div.mapLayer div.body ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+div.mapLayer div.body ul li {
+	margin: 0px;
+	padding: 3px 0px;
+	text-align: left;
+}
+
+div.mapLayer div.body ul li label {
+	margin: 0px 10px 0px 2px;
+	font-weight: bold;
+	display: inline-block;
+	*display: inline;
+	width: 55px;
+}
+div.mapLayer div.body ul li span {
+	display: inline-block;
+	*display: inline;
+	width: 250px;
+}
+div.mapLayer div.body p {
+	text-align: right;
+	border-top: 1px solid #f4f4f4;
+	padding: 5px 0px;
+}
+
+div.marker-overlap {
+	border: 1px solid #333;
+	background-color: #fff;
+	padding: 5px;
+	font-size: 14px;
+	display: block;
+}
+div.marker-overlap span {
+	font-weight:bold;
+	color:#f00;
+	margin-right: 5px;
+}
+
+div.marker-overlap-template {
+	border: 1px solid #333;
+	background-color:#fff;
+	padding: 10px;
+	font-size: 14px;
+	display: block;
+}
+
+div.marker-overlap-template ol {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+div.marker-overlap-template ol li {
+	list-style: none;
+	padding: 3px;
+	display: block;
+}

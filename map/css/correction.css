@@ -1,0 +1,65 @@
+div#map {
+	width: 100%;
+	clear: both;
+}
+div#search-list {
+	overflow-y: auto;
+}
+div#search-detail {
+	min-height: 200px;
+}
+div#search-detail div.scroll {
+	overflow-y: auto;
+}
+div#search-detail dl {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+div#search-detail dl dd {
+	margin: 0px;
+	padding: 3px 0px;
+}
+div#search-detail dl dd label {
+	width: 60px;
+	text-align: left;
+	margin: 0px 9px 0px 15px;
+	display: inline-block;
+}
+@media(min-width: 1200px) {
+	.container {
+		width: 100%;
+	}
+}
+.naver-control {
+	z-index: 100;
+	overflow: hidden;
+	display: inline-block;
+	position: absolute;
+	top: 7px;
+	left: 5px;
+	width: 34px;
+	height: 34px;
+	border: 1px solid rgba(58,70,88,.45);
+	border-radius: 2px;
+	background: #fcfcfd;
+	text-align: center;
+	-webkit-background-clip: padding;
+	background-clip: padding-box;
+}
+.naver-control-icon-bg {
+	overflow: hidden;
+	display: inline-block;
+	color: transparent!important;
+	vertical-align: top;
+	background: url("../images/map/bg_naver.png") 0 0;
+	background-size: 200px 200px;
+	-webkit-background-size: 200px 200px;
+}
+.naver-control-icon-bg-current {
+	width: 20px;
+	height: 20px;
+	margin: 7px 0 0 0;
+	background-position: -153px -31px;
+}
